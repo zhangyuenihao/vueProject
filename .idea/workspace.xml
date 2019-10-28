@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d249202d-fa0c-40ba-8064-25011d0b5e30" name="Default Changelist" comment="tabBar导航栏slot切割路由跳转和激活颜色">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vueProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tabbar/src/components/content/mainTabBar/MainTabBar.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tabbar/vue.config.js" afterDir="false" />
+    <list default="true" id="d249202d-fa0c-40ba-8064-25011d0b5e30" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tabbar/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/tabbar/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tabbar/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/tabbar/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tabbar/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/tabbar/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tabbar/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tabbar/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tabbar/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tabbar/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tabbar/src/components/MainTabBar.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tabbar/src/components/tabbar/TabBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tabbar/src/components/common/tabbar/TabBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tabbar/src/components/tabbar/TabBarItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tabbar/src/components/common/tabbar/TabBarItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tabbar/src/components/content/mainTabBar/MainTabBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tabbar/src/components/content/mainTabBar/MainTabBar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tabbar/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/tabbar/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tabbar/src/network/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/tabbar/src/network/request.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tabbar/src/views/home/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tabbar/src/views/home/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tabbar/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tabbar/vue.config.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,94 +23,81 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tabbar/src/App.vue">
+        <entry file="file://$PROJECT_DIR$/tabbar/node_modules/vue-awesome-swiper/src/ssr.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tabbar/node_modules/vue-awesome-swiper/dist/ssr.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tabbar/src/views/home/Home.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
-              <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tabbar/src/components/common/tabbar/TabBarItem.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tabbar/src/components/content/mainTabBar/MainTabBar.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="55" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="55" />
+              <caret line="13" lean-forward="true" selection-start-line="9" selection-end-line="13" />
               <folding>
-                <element signature="e#1276#1328#0" expanded="true" />
+                <element signature="e#218#270#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tabbar/src/views/home/Home.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/tabbar/node_modules/vue-awesome-swiper/src/slide.vue">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tabbar/public/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/tabbar/node_modules/vue-awesome-swiper/src/index.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tabbar/src/components/common/tabbar/TabBar.vue">
+        <entry file="file://$PROJECT_DIR$/tabbar/src/components/common/swiper/SwiperItem.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tabbar/src/components/common/navbar/NavBar.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tabbar/src/network/request.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+            <state relative-caret-position="952">
+              <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tabbar/src/network/home.js">
+        <entry file="file://$PROJECT_DIR$/tabbar/src/views/home/childComps/HomeSwiper.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+            <state relative-caret-position="113">
+              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tabbar/src/views/category/Category.vue">
+        <entry file="file://$PROJECT_DIR$/tabbar/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="20" selection-end-line="24" />
+            <state relative-caret-position="136">
+              <caret line="8" column="25" lean-forward="true" selection-start-line="5" selection-end-line="8" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tabbar/src/network/home.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tabbar/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -136,8 +113,8 @@
         <option value="vue component" />
         <option value="HTML File" />
         <option value="Vue Component A" />
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -163,26 +140,30 @@
         <option value="$PROJECT_DIR$/tabbar/src/views/profile/Profile.vue" />
         <option value="$PROJECT_DIR$/tabbar/src/components/tabbar/TabBar.vue" />
         <option value="$PROJECT_DIR$/tabbar/src/components/tabbar/TabBarItem.vue" />
-        <option value="$PROJECT_DIR$/tabbar/vue.config.js" />
         <option value="$PROJECT_DIR$/tabbar/src/components/MainTabBar.vue" />
-        <option value="$PROJECT_DIR$/tabbar/src/main.js" />
         <option value="$PROJECT_DIR$/tabbar/src/views/category/Category.vue" />
         <option value="$PROJECT_DIR$/tabbar/src/views/home/index.html" />
         <option value="$PROJECT_DIR$/tabbar/src/views/home/Specification.vue" />
         <option value="$PROJECT_DIR$/tabbar/src/views/home/Option.vue" />
-        <option value="$PROJECT_DIR$/tabbar/src/components/content/mainTabBar/MainTabBar.vue" />
         <option value="$PROJECT_DIR$/tabbar/src/App.vue" />
         <option value="$PROJECT_DIR$/tabbar/public/index.html" />
-        <option value="$PROJECT_DIR$/tabbar/src/views/home/Home.vue" />
         <option value="$PROJECT_DIR$/tabbar/src/components/common/navbar/NavBar.vue" />
-        <option value="$PROJECT_DIR$/tabbar/src/network/request.js" />
         <option value="$PROJECT_DIR$/tabbar/src/network/home.js" />
+        <option value="$PROJECT_DIR$/tabbar/src/network/request.js" />
+        <option value="$PROJECT_DIR$/tabbar/vue.config.js" />
+        <option value="$PROJECT_DIR$/tabbar/src/main.js" />
+        <option value="$PROJECT_DIR$/tabbar/src/components/common/swiper/Swiper.vue" />
+        <option value="$PROJECT_DIR$/tabbar/src/components/common/swiper/SwiperItem.vue" />
+        <option value="$PROJECT_DIR$/tabbar/src/views/home/childComps/homeSwiper.vue" />
+        <option value="$PROJECT_DIR$/tabbar/src/views/home/Home.vue" />
+        <option value="$PROJECT_DIR$/tabbar/src/components/content/mainTabBar/MainTabBar.vue" />
+        <option value="$PROJECT_DIR$/tabbar/src/views/home/childComps/HomeSwiper.vue" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="49" />
-    <option name="y" value="384" />
+    <option name="x" value="618" />
+    <option name="y" value="306" />
     <option name="width" value="658" />
     <option name="height" value="384" />
   </component>
@@ -191,7 +172,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -221,19 +201,93 @@
               <item name="vueProject" type="462c0819:PsiDirectoryNode" />
               <item name="tabbar" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
+              <item name="tabbar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
+              <item name="tabbar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="swiper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
+              <item name="tabbar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
+              <item name="tabbar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="mainTabBar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
+              <item name="tabbar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="network" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
+              <item name="tabbar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
+              <item name="tabbar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
+              <item name="tabbar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="childComps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
+              <item name="tabbar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="profile" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../manage_sys" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -294,7 +348,16 @@
       <workItem from="1572057936296" duration="1862000" />
       <workItem from="1572067445818" duration="1274000" />
       <workItem from="1572070122257" duration="1139000" />
-      <workItem from="1572095451654" duration="4356000" />
+      <workItem from="1572095451654" duration="18686000" />
+      <workItem from="1572250234367" duration="232000" />
+      <workItem from="1572250475606" duration="351000" />
+      <workItem from="1572250835926" duration="1604000" />
+      <workItem from="1572252461860" duration="4090000" />
+      <workItem from="1572259089640" duration="105000" />
+      <workItem from="1572259207409" duration="98000" />
+      <workItem from="1572259312110" duration="866000" />
+      <workItem from="1572260185132" duration="141000" />
+      <workItem from="1572260333505" duration="3770000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1570859868946</created>
@@ -310,17 +373,24 @@
       <option name="project" value="LOCAL" />
       <updated>1570888403879</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="添加顶部导航栏&#10;添加axios并封装&#10;创建首页数据请求home.js">
+      <created>1572180917417</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572180917417</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80212000" />
+    <option name="totallyTimeSpent" value="105799000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="48" y="-1" width="1319" height="770" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33564815" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -333,7 +403,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32967034" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.47723705" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.29513344" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -386,7 +456,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="第一次提交" />
     <MESSAGE value="tabBar导航栏slot切割路由跳转和激活颜色" />
-    <option name="LAST_COMMIT_MESSAGE" value="tabBar导航栏slot切割路由跳转和激活颜色" />
+    <MESSAGE value="添加顶部导航栏&#10;添加axios并封装&#10;创建首页数据请求home.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加顶部导航栏&#10;添加axios并封装&#10;创建首页数据请求home.js" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/tabbar/src/assets/css/base.sass" />
@@ -431,13 +502,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tabbar/src/views/home/Options.vue" />
-    <entry file="file://$PROJECT_DIR$/tabbar/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tabbar/src/store.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -453,16 +517,6 @@
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tabbar/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tabbar/src/router.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -470,13 +524,6 @@
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tabbar/vue.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -511,15 +558,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tabbar/src/components/content/mainTabBar/MainTabBar.vue">
+    <entry file="file://$PROJECT_DIR$/tabbar/src/components/common/navbar/NavBar.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="55" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="55" />
-          <folding>
-            <element signature="e#1276#1328#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="167">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabbar/vue.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabbar/node_modules/vue-awesome-swiper/dist/vue-awesome-swiper.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabbar/node_modules/vue-awesome-swiper/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabbar/src/network/request.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="3" column="10" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabbar/src/components/common/swiper/Swiper.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabbar/node_modules/vue-awesome-swiper/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabbar/src/components/content/mainTabBar/MainTabBar.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabbar/node_modules/vue-awesome-swiper/LICENSE">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tabbar/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
@@ -528,31 +617,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tabbar/src/views/home/Home.vue">
+    <entry file="file://$PROJECT_DIR$/tabbar/node_modules/vue-awesome-swiper/src/swiper.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="10" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tabbar/src/components/common/navbar/NavBar.vue">
+    <entry file="file://$PROJECT_DIR$/tabbar/node_modules/vue-awesome-swiper/src/ssr.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabbar/node_modules/vue-awesome-swiper/dist/ssr.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabbar/node_modules/vue-awesome-swiper/src/slide.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabbar/node_modules/vue-awesome-swiper/src/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabbar/src/components/common/swiper/SwiperItem.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+        <state relative-caret-position="952">
+          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tabbar/src/network/request.js">
+    <entry file="file://$PROJECT_DIR$/tabbar/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+        <state relative-caret-position="136">
+          <caret line="8" column="25" lean-forward="true" selection-start-line="5" selection-end-line="8" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tabbar/src/network/home.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabbar/src/views/home/Home.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="9" selection-end-line="13" />
+          <folding>
+            <element signature="e#218#270#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabbar/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabbar/src/views/home/childComps/HomeSwiper.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
         </state>
       </provider>
     </entry>
