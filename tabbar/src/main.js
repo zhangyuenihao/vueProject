@@ -3,13 +3,14 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import axios from 'axios'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
+
+Vue.use(VueAwesomeSwiper)
 Vue.config.productionTip = false
-axios.defaults.baseURL='http://123.207.32.32:8000'
+axios.defaults.baseURL='http://123.207.32.32:8000/api/v1/'
 new Vue({
   router,
   store,
   render: h => h(App)
 }).$mount('#app')
-axios({url:'/category'}).then(res=>{
-  console.log(res)
-})
