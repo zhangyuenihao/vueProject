@@ -4,12 +4,16 @@
             <div slot="center">购物街</div>
         </nav-bar>
         <home-swiper :banners="banners"></home-swiper>
+        <recommend-view :recommends="recommends"></recommend-view>
+        <feature-view></feature-view>
     </div>
 </template>
 
 <script>
     import NavBar from 'components/common/navbar/NavBar'
     import HomeSwiper from './childComps/HomeSwiper'
+    import RecommendView from './childComps/RecommendView'
+    import FeatureView from  './childComps/FeatureView'
     import {getHomeMultidata} from "network/home";
 
     export default {
@@ -40,7 +44,7 @@
         mounted() {
         },
         components: {
-            NavBar,HomeSwiper
+            NavBar,HomeSwiper,RecommendView,FeatureView
         }
     };
 </script>
