@@ -2,56 +2,84 @@
 
 /*:root -> 获取根元素html*/
 :root {
-  --color-text: #666;
-  --color-high-text: #ff5777;
-  --color-tint: #ff8198;
-  --color-background: #fff;
-  --font-size: 14px;
-  --line-height: 1.5;
+    --color-text: #7ca1d2;
+    --color-tint: #8ec7dc;
+    --color-high-text: #6de9eb;
+    --color-high: #1e95ff;
+    --color-background: #fff;
+    --font-size: 14px;
+    --line-height: 1.5;
+    --line-color: #034299;
+    --grid-color: #023c7a;
+    --border-color: #1a3f72
+}
+
+.mt24 {
+    margin-top: 24px;
 }
 
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
-  user-select: none; /* 禁止用户鼠标在页面上选中文字/图片等 */
-  -webkit-tap-highlight-color: transparent; /* webkit是苹果浏览器引擎，tap点击，highlight背景高亮，color颜色，颜色用数值调节 */
-  background: var(--color-background);
-  color: var(--color-text);
-  /* rem vw/vh */
-  width: 100vw;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    user-select: none; /* 禁止用户鼠标在页面上选中文字/图片等 */
+    -webkit-tap-highlight-color: transparent; /* webkit是苹果浏览器引擎，tap点击，highlight背景高亮，color颜色，颜色用数值调节 */
+    background: var(--color-background);
+    color: var(--color-text);
+    /* rem vw/vh */
+    width: 100vw;
 }
 
 a {
-  color: var(--color-text);
-  text-decoration: none;
+    color: var(--color-text);
+    text-decoration: none;
 }
 
 
 .clear-fix::after {
-  clear: both;
-  content: '';
-  display: block;
-  width: 0;
-  height: 0;
-  visibility: hidden;
+    clear: both;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
 }
 
 .clear-fix {
-  zoom: 1;
+    zoom: 1;
 }
 
 .left {
-  float: left;
+    float: left;
 }
 
 .right {
-  float: right;
+    float: right;
 }
 
+.color-high {
+    color: var(--color-high);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.high {
+    height: 40px;
+    line-height: 40px;
+}
+
+.echarts {
+    width: 100%;
+    height: 100%;
+}
+
+.item-chart {
+    height: 100%;
+    width: 100%;
+}

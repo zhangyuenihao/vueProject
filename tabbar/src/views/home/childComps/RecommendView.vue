@@ -29,9 +29,6 @@
         display: flex;
         padding: 10px 0 20px 0;
         border-bottom: 8px solid #eee;
-    }
-    a{
-        text-decoration: none;
         font-size: 12px;
     }
     .recommend-item {
@@ -42,5 +39,6 @@
 
     .recommend-item img {
         width: 100%;
+        margin-bottom: 5px;
     }
 </style>

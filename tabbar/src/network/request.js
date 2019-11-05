@@ -3,10 +3,11 @@ import axios from 'axios'
 export function request(config) {
     //创建实例
     const instance = axios.create({
-        baseUrl: 'http://123.207.32.32:8000/api/v1/'
+        baseUrl: 'http://123.207.32.32:8000/api/v2'
     })
     //请求拦截
     instance.interceptors.request.use(config=>{
+        console.log(config)
         return config
     },err=>{
         //console.log(err)
