@@ -47,6 +47,7 @@
 
     .tabcontrol-item {
         flex: 1;
+        cursor: pointer;
     }
     .active{
         color: var(--color-high-text);

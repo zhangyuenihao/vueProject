@@ -3,7 +3,9 @@ import axios from 'axios'
 export function request(config) {
     //创建实例
     const instance = axios.create({
-        baseUrl: 'http://123.207.32.32:8000/api/v2'
+        baseURL: 'http://123.207.32.32:8000/api/v1',
+       /* baseURL:'http://yapi.demo.qunar.com/mock/29662/suppermall',*/
+        timeout:5000
     })
     //请求拦截
     instance.interceptors.request.use(config=>{

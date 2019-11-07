@@ -15,15 +15,15 @@ module.exports = {
         'resize-detector'
     ],
     devServer: {
-       /*proxy: {
+       proxy: {
             '/api': {
-                target: 'https://www.easy-mock.com/mock/5dc161b79c2ccc4a3130ff05/echarts',
+                target: 'http://yapi.demo.qunar.com/mock/29046/',
                 changeOrigin: true,
                 ws: true,
                 pathRewrite: {
                     '^/api': ''
                 }
             }
-        }*/
+        }
     }
 }

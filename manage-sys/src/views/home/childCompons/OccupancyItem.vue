@@ -20,19 +20,16 @@
                    <span class="lightColor" :style="{backgroundColor:color}"></span>
                     <span>亮灯提示</span>
                 </div>
-                <div v-for="(item,index) in getList" :key="item.id" class="radios">
-                    <input :id="item" type="radio" name="radio"
-                           v-model="current" :value="index"
-                           class="regular-radio"
-                           @click="chose(index)">
-                    <label :for="item">{{item}}</label>
+                <div v-for="(item,index) in getList" :key="item.id" class="radios"
+                     :class="{active:index===currentIndex}"  @click="chose(index)">
+                    <span class="radios-text">{{item}}</span>
                 </div>
             </div>
         </div>
         <div slot="item-chart" class="image-warp">
-                <img v-show="current==0" src="~assets/image/light.png" alt="">
-            <img v-show="current==1" src="~assets/image/light2.png" alt="">
-            <img v-show="current==2" src="~assets/image/light2.png" alt="">
+                <img v-show="currentIndex==0" src="~assets/image/light.png" alt="">
+            <img v-show="currentIndex==1" src="~assets/image/light2.png" alt="">
+            <img v-show="currentIndex==2" src="~assets/image/light2.png" alt="">
         </div>
 
     </item-list>
@@ -53,7 +50,7 @@
         },
         data(){
             return{
-                current:null,
+                currentIndex:null,
                 color:null
             }
         },
@@ -61,7 +58,7 @@
           chose(index){
               const colors=['#58c2d9','#eb1c24','#979797']
               this.color=colors[index];
-              return this.current=index
+              return this.currentIndex=index
           }
         },
         computed: {

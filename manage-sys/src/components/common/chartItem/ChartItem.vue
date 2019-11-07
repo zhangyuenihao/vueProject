@@ -21,7 +21,6 @@
         computed:{
             getOptions:function () {
                 this.$set(this.options,'color',this.color)
-                window.console.log(this.options)
                 return this.options
             }
         }

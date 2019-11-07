@@ -83,3 +83,37 @@ a {
     height: 100%;
     width: 100%;
 }
+
+/*单选框*/
+.radios {
+
+    margin-right: 30px;
+    cursor: pointer;
+    position: relative;
+    color: #8ec7dc;
+    font-size: 14px;
+}
+
+.radios-text:before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #184489;
+    margin-right: 4px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.active .radios-text:after {
+    position: absolute;
+    left:5px;
+    top: 7px;
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background: #8ec7dc;
+    margin-right: 2px;
+    border-radius: 50%;
+}

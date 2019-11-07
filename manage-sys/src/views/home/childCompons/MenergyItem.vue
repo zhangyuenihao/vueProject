@@ -2,11 +2,9 @@
     <item-list>
         <h5 slot="title">{{mEnergy.title}}</h5>
         <div slot="item-content" class="item-content">
-            <div v-for="(item,index) in mEnergy.electric.list" :key="item.id" class="radios">
-                <input :id="index" type="radio" name="radios"
-                       v-model="currentIndex" :value="index"
-                       @click="getList(index)">
-                <label :for="index">{{index+1+'月'}}</label>
+            <div v-for="(item,index) in mEnergy.electric.list" :key="item.id" class="radios"
+                 :class="{active:index===currentIndex}" @click="getList(index)">
+                <span class="radios-text">{{index+1+'月'}}</span>
             </div>
         </div>
         <div slot="item-chart" class="item-chart">
@@ -32,7 +30,7 @@
         },
         data() {
             return {
-                currentIndex:0
+                currentIndex: 0
             }
         },
         methods: {
@@ -40,14 +38,13 @@
                 this.currentIndex = index
                 const result1 = this.mEnergy.electric.list[this.currentIndex]
                 const result2 = this.mEnergy.water.list[this.currentIndex]
-                window.console.log(result1);
                 return {
                     result1, result2
                 }
             }
         },
-        created() {
-            this.getList(this.mEnergy.electric.list.length-1);
+        mounted() {
+            this.getList(this.mEnergy.electric.list.length - 1);
         },
         computed: {
             getOptions: function () {
@@ -131,7 +128,7 @@
                         {
                             name: legend[0] + '  (度)',
                             type: 'bar',
-                            barWidth:20,
+                            barWidth: 20,
                             itemStyle: {
                                 normal: {
                                     color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
@@ -189,17 +186,10 @@
         z-index: 10;
 
     }
-
-    .item-content input {
-        vertical-align: middle;
-    }
-
     .radios {
         float: right;
-        margin: 0 10px;
-        color: #8ec7dc;
-        font-size: 14px;
-        vertical-align: middle;
     }
+
+
 
 </style>

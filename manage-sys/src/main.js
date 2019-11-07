@@ -28,6 +28,3 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
-axios.defaults.timeout = 5000 // 请求超时
-axios.defaults.baseURL = 'https://www.easy-mock.com/mock/5dc161b79c2ccc4a3130ff05/echarts'
-console.log(process.env.BASE_URL);
