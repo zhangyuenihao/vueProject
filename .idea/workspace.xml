@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d249202d-fa0c-40ba-8064-25011d0b5e30" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d249202d-fa0c-40ba-8064-25011d0b5e30" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -18,8 +16,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manage-sys/vue.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+            <state relative-caret-position="442">
+              <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -27,7 +25,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manage-sys/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
+            <state relative-caret-position="153">
               <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -39,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tabbar/src/views/home/Home.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="93" column="38" lean-forward="true" selection-start-line="93" selection-start-column="38" selection-end-line="93" selection-end-column="38" />
+            <state relative-caret-position="1445">
+              <caret line="93" column="38" selection-start-line="93" selection-start-column="38" selection-end-line="93" selection-end-column="38" />
               <folding>
                 <element signature="e#1284#1332#0" expanded="true" />
               </folding>
@@ -74,7 +72,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tabbar/src/network/request.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
+            <state relative-caret-position="85">
               <caret line="5" column="52" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="52" />
             </state>
           </provider>
@@ -92,7 +90,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tabbar/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="68">
               <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="62" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -203,6 +201,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -213,87 +212,6 @@
             <path>
               <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="vueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="manage-sys" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="manage-sys" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="manage-sys" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="manage-sys" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="manage-sys" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="manage-sys" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="manage-sys" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="chartItem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="manage-sys" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="network" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="manage-sys" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="manage-sys" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="manage-sys" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-              <item name="childCompons" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
               <item name="tabbar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -301,6 +219,39 @@
               <item name="vueProject" type="462c0819:PsiDirectoryNode" />
               <item name="tabbar" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
+              <item name="tabbar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
+              <item name="tabbar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
+              <item name="tabbar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
+              <item name="cart" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
+              <item name="tabbar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
@@ -361,7 +312,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -470,6 +420,7 @@
       <workItem from="1572763288917" duration="52629000" />
       <workItem from="1572958810942" duration="1166000" />
       <workItem from="1572960006407" duration="25083000" />
+      <workItem from="1573206124426" duration="1005000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1570859868946</created>
@@ -527,11 +478,18 @@
       <option name="project" value="LOCAL" />
       <updated>1573106949294</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="上传tabbar所有图片">
+      <created>1573206334181</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1573206334182</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="338274000" />
+    <option name="totallyTimeSpent" value="339279000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -543,9 +501,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="48" y="1079" width="1319" height="770" extended-state="7" />
+    <frame x="48" y="-1" width="1319" height="770" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19521604" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19521604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -558,8 +516,8 @@
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4992284" weight="0.32967034" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49845678" visible="true" weight="0.24960753" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5015432" side_tool="true" weight="0.36263737" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4976852" visible="true" weight="0.24960753" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5023148" side_tool="true" visible="true" weight="0.24960753" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -637,7 +595,8 @@
     <MESSAGE value="添加本地图片&#10;添加本地数据" />
     <MESSAGE value="大部分做完，还剩小细节" />
     <MESSAGE value="先获取数据再渲染页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="先获取数据再渲染页面" />
+    <MESSAGE value="上传tabbar所有图片" />
+    <option name="LAST_COMMIT_MESSAGE" value="上传tabbar所有图片" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -868,9 +827,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/manage-sys/vue.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/manage-sys/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
+        <state relative-caret-position="153">
           <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
@@ -878,25 +844,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manage-sys/vue.config.js">
+    <entry file="file://$PROJECT_DIR$/tabbar/src/views/home/Home.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        <state relative-caret-position="1445">
+          <caret line="93" column="38" selection-start-line="93" selection-start-column="38" selection-end-line="93" selection-end-column="38" />
+          <folding>
+            <element signature="e#1284#1332#0" expanded="true" />
+          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tabbar/vue.config.js">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tabbar/src/views/home/childComps/RecommendView.vue">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tabbar/src/components/content/tabControl/TabControl.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tabbar/src/network/home.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -905,9 +864,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tabbar/src/network/request.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="52" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabbar/src/components/content/tabControl/TabControl.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tabbar/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="68">
           <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="62" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
@@ -915,22 +888,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tabbar/src/network/request.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="5" column="52" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tabbar/src/views/home/Home.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="93" column="38" lean-forward="true" selection-start-line="93" selection-start-column="38" selection-end-line="93" selection-end-column="38" />
-          <folding>
-            <element signature="e#1284#1332#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/tabbar/vue.config.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/manage-sys/src/network/request.js">
       <provider selected="true" editor-type-id="text-editor">
