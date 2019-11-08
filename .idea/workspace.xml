@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d249202d-fa0c-40ba-8064-25011d0b5e30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/manage-sys/src/assets/aaa.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage-sys/src/assets/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/manage-sys/src/assets/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage-sys/src/components/common/chartItem/ChartItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/manage-sys/src/components/common/chartItem/ChartItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage-sys/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/manage-sys/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage-sys/src/network/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/manage-sys/src/network/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage-sys/src/network/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/manage-sys/src/network/request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage-sys/src/views/home/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/manage-sys/src/views/home/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage-sys/src/views/home/childCompons/MenergyItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/manage-sys/src/views/home/childCompons/MenergyItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage-sys/src/views/home/childCompons/OccupancyItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/manage-sys/src/views/home/childCompons/OccupancyItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage-sys/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/manage-sys/vue.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tabbar/src/components/content/tabControl/TabControl.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tabbar/src/components/content/tabControl/TabControl.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tabbar/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/tabbar/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tabbar/src/network/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/tabbar/src/network/request.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -206,10 +193,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="493" />
-    <option name="y" value="1234" />
-    <option name="width" value="650" />
-    <option name="height" value="396" />
+    <option name="x" value="213" />
+    <option name="y" value="96" />
+    <option name="width" value="989" />
+    <option name="height" value="576" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -482,7 +469,7 @@
       <workItem from="1572705481837" duration="7950000" />
       <workItem from="1572763288917" duration="52629000" />
       <workItem from="1572958810942" duration="1166000" />
-      <workItem from="1572960006407" duration="23413000" />
+      <workItem from="1572960006407" duration="25083000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1570859868946</created>
@@ -533,11 +520,18 @@
       <option name="project" value="LOCAL" />
       <updated>1572968374073</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="先获取数据再渲染页面">
+      <created>1573106949294</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1573106949294</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="336604000" />
+    <option name="totallyTimeSpent" value="338274000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -549,7 +543,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="48" y="1079" width="1319" height="770" extended-state="6" />
+    <frame x="48" y="1079" width="1319" height="770" extended-state="7" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19521604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -642,7 +636,8 @@
     <MESSAGE value="1添加所有本地图片&#10;2修改request 请求超过时间&#10;3添加推荐模板&#10;4添加本周流行模板" />
     <MESSAGE value="添加本地图片&#10;添加本地数据" />
     <MESSAGE value="大部分做完，还剩小细节" />
-    <option name="LAST_COMMIT_MESSAGE" value="大部分做完，还剩小细节" />
+    <MESSAGE value="先获取数据再渲染页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="先获取数据再渲染页面" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
