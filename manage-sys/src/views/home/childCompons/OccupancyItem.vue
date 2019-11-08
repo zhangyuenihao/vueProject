@@ -50,14 +50,14 @@
         },
         data(){
             return{
-                currentIndex:null,
-                color:null
+                currentIndex:0,
+                color:[]
             }
         },
         methods:{
           chose(index){
               const colors=['#58c2d9','#eb1c24','#979797']
-              this.color=colors[index];
+              this.color=colors[index]
               return this.currentIndex=index
           }
         },
@@ -67,7 +67,7 @@
             }
         },
         created(){
-            this.chose(0)
+            this.chose(this.currentIndex)
         },
         components: {
             ItemList
