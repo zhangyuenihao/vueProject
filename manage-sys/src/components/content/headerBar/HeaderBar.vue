@@ -6,7 +6,7 @@
             <span>{{getDate.time}}</span>
         </div>
         <div class="title">
-            <h3>镇江科技产业园智慧园区</h3>
+            <h3>XX科技产业园智慧园区</h3>
         </div>
         <div class="hd-item weather">
             <span class="sky">多云</span>
