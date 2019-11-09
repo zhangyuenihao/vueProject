@@ -36,10 +36,10 @@
         methods: {
             getList(index) {
                 this.currentIndex = index
-                const result1 = this.mEnergy.electric.list[this.currentIndex]
-                const result2 = this.mEnergy.water.list[this.currentIndex]
+                const electricList = this.mEnergy.electric.list[this.currentIndex]
+                const waterList = this.mEnergy.water.list[this.currentIndex]
                 return {
-                    result1, result2
+                    electricList, waterList
                 }
             }
         },
@@ -49,6 +49,7 @@
         computed: {
             getOptions: function () {
                 const {legend, axisData} = this.mEnergy
+                const{electricList,waterList}=this.getList(this.currentIndex)
                 const options = {
                     tooltip: {
                         trigger: 'axis',
@@ -146,12 +147,12 @@
                                     }
                                 }
                             },
-                            data: this.getList(this.currentIndex).result1
+                            data: electricList
                         },
                         {
                             name: legend[1] + '  (吨)',
                             type: 'line',
-                            data: this.getList(this.currentIndex).result2,
+                            data: waterList,
                             itemStyle: {
                                 normal: {
                                     color: "#6de9eb"

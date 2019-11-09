@@ -22,10 +22,7 @@
             async getDataList() {
                 try{
                     const res=await getDataList()
-                    this.$nextTick(()=>{
                         this.dataList=res.dataList
-                    })
-
                 }catch (err) {
                     console.log(err)
                 }

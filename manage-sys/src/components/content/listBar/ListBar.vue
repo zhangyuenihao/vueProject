@@ -3,7 +3,7 @@
         <div class="top">
             <div class="left">
                 <div class="left-top">
-                    <business-item :business="business" :colors="colors" ref="aaa"></business-item>
+                    <business-item :business="business"  ref="aaa"></business-item>
                 </div>
                 <div class="left-bottom">
                     <hydraulic-item :hydraulic="hydraulic"></hydraulic-item>
@@ -44,7 +44,7 @@
 
     export default {
         name: "ListBar",
-        props: ['colors',
+        props: [
             'business',
             'hydraulic',
             'occupancy',
