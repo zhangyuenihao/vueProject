@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d249202d-fa0c-40ba-8064-25011d0b5e30" name="Default Changelist" comment="" />
+    <list default="true" id="d249202d-fa0c-40ba-8064-25011d0b5e30" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -201,7 +203,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -227,91 +228,11 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="tabbar" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="tabbar" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
-              <item name="cart" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="tabbar" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="tabbar" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="tabbar" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="content" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="tabbar" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="content" type="462c0819:PsiDirectoryNode" />
-              <item name="tabControl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="tabbar" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="network" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="tabbar" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="tabbar" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vueProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vueProject" type="462c0819:PsiDirectoryNode" />
-              <item name="tabbar" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-              <item name="childComps" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -489,7 +410,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="339279000" />
+    <option name="totallyTimeSpent" value="340647000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -513,11 +434,11 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4992284" weight="0.32967034" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4992284" weight="0.32967034" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4976852" weight="0.32967034" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4976852" visible="true" weight="0.24960753" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5023148" side_tool="true" visible="true" weight="0.24960753" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49691358" visible="true" weight="0.24960753" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50308645" side_tool="true" visible="true" weight="0.24960753" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -603,7 +524,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/manage-sys/src/views/home/childCompons/MenergyItem.vue</url>
-          <line>52</line>
+          <line>53</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
