@@ -3,11 +3,14 @@
         <nav-bar class="home-nav">
             <div slot="center">购物街</div>
         </nav-bar>
-        <home-swiper :banners="banners"></home-swiper>
-        <recommend-view :recommends="recommends"></recommend-view>
-        <feature-view></feature-view>
-        <tab-control class="home-tab" :titles="['流行','新款','精选']" @tabClick="tabClick"></tab-control>
-        <goods-list :goodsList="goods.pop.list"></goods-list>
+        <scroll class="content">
+            <home-swiper :banners="banners"></home-swiper>
+            <recommend-view :recommends="recommends"></recommend-view>
+            <feature-view></feature-view>
+            <tab-control class="home-tab" :titles="['流行','新款','精选']" @tabClick="tabClick"></tab-control>
+            <goods-list :goodsList="goods[currentType].list"></goods-list>
+
+        </scroll>
         <ul>
             <li>商品1</li>
             <li>商品2</li>
@@ -51,8 +54,9 @@
     import NavBar from 'components/common/navbar/NavBar'
     import TabControl from 'components/content/tabControl/TabControl'
     import GoodsList from 'components/content/goods/GoodsList'
+    import Scroll from 'components/common/scroll/Scroll'
 
-    import {getHomeMultidata,getHomeGoods} from "network/home"
+    import {getHomeMultidata, getHomeGoods} from "network/home"
 
     export default {
         name: "Home",
@@ -65,25 +69,25 @@
                     new: {page: 0, list: []},
                     sell: {page: 0, list: []}
                 },
-                currentType:'pop'
+                currentType: 'pop'
             }
         },
         methods: {
             /**
              * 事件监听相关方法
              */
-             tabClick(index){
-                 switch (index) {
-                     case 0:
-                         this.currentType='pop'
-                         break
-                     case 1:
-                         this.currentType='new'
-                         break
-                     case 2:
-                         this.constructor='sell'
-                         break
-                 }
+            tabClick(index) {
+                switch (index) {
+                    case 0:
+                        this.currentType = 'pop'
+                        break
+                    case 1:
+                        this.currentType = 'new'
+                        break
+                    case 2:
+                        this.currentType = 'sell'
+                        break
+                }
             },
 
             /**
@@ -98,13 +102,12 @@
                     console.log(res.data)
                 })
             },
-            getHomeGoods(type){
-
-                const page=this.goods[type].page+1
-                return getHomeGoods(type,page).then(res=>{
+            getHomeGoods(type) {
+                const page = this.goods[type].page + 1
+                return getHomeGoods(type, page).then(res => {
                     console.log(res)
-                    this.goods[type].list=res.data.list
-                    this.goods[type].page+=1
+                    this.goods[type].list.push(...res.data.list)
+                    this.goods[type].page += 1
                 })
             }
         }
@@ -113,7 +116,7 @@
         ,
         created() {
             this.getHomeMultidata()
-           this.getHomeGoods('pop')
+            this.getHomeGoods('pop')
             this.getHomeGoods('new')
             this.getHomeGoods('sell')
         }
@@ -122,15 +125,17 @@
         }
         ,
         components: {
-            NavBar, HomeSwiper, RecommendView, FeatureView, TabControl, GoodsList
+            NavBar, HomeSwiper, RecommendView, FeatureView, TabControl, GoodsList, Scroll
         }
     }
     ;
 </script>
 
-<style>
+<style scoped>
     #home {
         padding-top: 44px;
+        position: relative;
+        height: 100vh;
     }
 
     .home-nav {
@@ -146,6 +151,16 @@
     .home-tab {
         position: sticky;
         top: 44px;
+        background: white;
+    }
+
+    .content {
+        overflow: hidden;
+      position: absolute;
+        top: 44px;
+        bottom: 49px;
+        left: 0;
+        right: 0;
         background: white;
     }
 </style>

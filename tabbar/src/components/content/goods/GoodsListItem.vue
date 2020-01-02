@@ -2,7 +2,7 @@
     <div class="goods-item">
         <a :href="goodsListItem.link">
             <img class="goodsListItem-img" :src="goodsListItem.show.img" alt="">
-            <div>
+            <div class="goodsListItem-info">
                 <p class="goodListItem-title">{{goodsListItem.title}}</p>
                 <span class="goodsListItem-price">￥{{goodsListItem.price}}</span>
                 <span class="goodsListItem-cfav">{{goodsListItem.cfav}}</span>
@@ -45,19 +45,19 @@
     }
     .goodsListItem-price{
         color: var(--color-high-text);
-        vertical-align: middle;
         margin-right: 10px;
     }
     .goodsListItem-cfav{
-        vertical-align: middle;
+
     }
    .goodsListItem-cfav:before{
        content: '';
        display: inline-block;
        width: 14px;
        height:14px;
-       background: url("~assets/image/common/collect.svg") left center;
+       background: url("~assets/image/common/collect.svg") center center;
        background-size: cover;
        vertical-align: middle;
+       margin-top: -1px;
    }
 </style>
