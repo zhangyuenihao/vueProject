@@ -3,23 +3,14 @@
         <nav-bar class="home-nav">
             <div slot="center">购物街</div>
         </nav-bar>
-<<<<<<< HEAD
         <Scroll class="content" ref="scroll">
-=======
-        <scroll class="content">
->>>>>>> origin/dev
             <home-swiper :banners="banners"></home-swiper>
             <recommend-view :recommends="recommends"></recommend-view>
             <feature-view></feature-view>
             <tab-control class="home-tab" :titles="['流行','新款','精选']" @tabClick="tabClick"></tab-control>
             <goods-list :goodsList="goods[currentType].list"></goods-list>
-<<<<<<< HEAD
         </Scroll>
         <back-top @click.native="backClick"></back-top>
-=======
-
-        </scroll>
->>>>>>> origin/dev
         <ul>
             <li>商品1</li>
             <li>商品2</li>
@@ -64,11 +55,7 @@
     import Scroll from 'components/common/scroll/Scroll'
     import TabControl from 'components/content/tabControl/TabControl'
     import GoodsList from 'components/content/goods/GoodsList'
-<<<<<<< HEAD
     import BackTop from "components/content/backTop/BackTop"
-=======
-    import Scroll from 'components/common/scroll/Scroll'
->>>>>>> origin/dev
 
     import {getHomeMultidata, getHomeGoods} from "network/home"
 
@@ -102,7 +89,6 @@
                         this.currentType = 'sell'
                         break
                 }
-<<<<<<< HEAD
             },
             /**
              * 返回顶部 scroll是获取的组件元素
@@ -111,8 +97,6 @@
                 console.log('1')
               this.$refs.scroll.scrollTo(0,0,600)
 
-=======
->>>>>>> origin/dev
             },
 
             /**
@@ -128,18 +112,11 @@
                 })
             },
             getHomeGoods(type) {
-<<<<<<< HEAD
 
                 const page = this.goods[type].page + 1
                 return getHomeGoods(type, page).then(res => {
                     console.log(res)
                     this.goods[type].list = res.data.list
-=======
-                const page = this.goods[type].page + 1
-                return getHomeGoods(type, page).then(res => {
-                    console.log(res)
-                    this.goods[type].list.push(...res.data.list)
->>>>>>> origin/dev
                     this.goods[type].page += 1
                 })
             }
@@ -158,12 +135,8 @@
         }
         ,
         components: {
-<<<<<<< HEAD
             NavBar, HomeSwiper, Scroll, RecommendView, FeatureView, TabControl, GoodsList,
             BackTop
-=======
-            NavBar, HomeSwiper, RecommendView, FeatureView, TabControl, GoodsList, Scroll
->>>>>>> origin/dev
         }
     }
     ;
@@ -171,15 +144,9 @@
 
 <style scoped>
     #home {
-<<<<<<< HEAD
       padding-top: 44px;
       height: 100vh;
         position: relative;
-=======
-        padding-top: 44px;
-        position: relative;
-        height: 100vh;
->>>>>>> origin/dev
     }
 
     .home-nav {
@@ -199,21 +166,11 @@
     }
 
     .content {
-<<<<<<< HEAD
         position: absolute;
         top: 44px;
         right: 0;
         bottom: 49px;
         left: 0;
         background-color: white;
-=======
-        overflow: hidden;
-      position: absolute;
-        top: 44px;
-        bottom: 49px;
-        left: 0;
-        right: 0;
-        background: white;
->>>>>>> origin/dev
     }
 </style>
