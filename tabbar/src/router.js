@@ -7,7 +7,7 @@ const Home=()=>import ("./views/home/Home");
 const Category=()=>import ("./views/category/Category");
 const Cart=()=>import ("./views/cart/Cart");
 const Profile=()=>import ("./views/profile/Profile");
-
+const Vuex=()=>import ("./views/vuex/Vuex");
 
 
 export default new Router({
@@ -33,6 +33,10 @@ export default new Router({
     {
       path:'/profile',
       component:Profile
+    },
+    {
+      path:'/vuex',
+      component:Vuex
     }
 
   ]

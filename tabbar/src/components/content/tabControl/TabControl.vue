@@ -1,6 +1,6 @@
 <template>
     <div class="tab-control">
-        <div class="tabcontrol-item"
+        <div class="tabControl-item"
              v-for="(item,index) in titles"
              :key="index"
              :class="{active:index===currentIndex}"
@@ -45,7 +45,7 @@
         text-align: center;
     }
 
-    .tabcontrol-item {
+    .tabControl-item {
         flex: 1;
         cursor: pointer;
     }

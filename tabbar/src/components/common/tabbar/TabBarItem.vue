@@ -47,6 +47,6 @@
     width:24px;
     height: 24px;
     vertical-align: middle;
-    margin-top: 2px;
+    margin-top: 5px;
 }
 </style>

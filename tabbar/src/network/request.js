@@ -3,7 +3,7 @@ import axios from 'axios'
 export function request(config) {
     //创建实例
     const instance = axios.create({
-        baseURL: 'http://123.207.32.32:8000/api/v1',
+        baseURL: 'http://123.207.32.32:8000/api/hy',
        /* baseURL:'http://yapi.demo.qunar.com/mock/29662/suppermall',*/
         timeout:5000
     })
