@@ -4,11 +4,19 @@
             <slot></slot>
         </div>
     </div>
+<<<<<<< HEAD
 
 </template>
 
 <script>
     import BScroll from 'better-scroll'
+=======
+    
+</template>
+
+<script>
+    import  BScroll from 'better-scroll'
+>>>>>>> origin/dev
     export default {
         name: "Scroll",
         data(){
@@ -28,6 +36,10 @@
             scrollTo(x,y,time){
                 this.scroll.scrollTo(x,y,time)
             }
+=======
+
+            })
+>>>>>>> origin/dev
         }
     }
 </script>
