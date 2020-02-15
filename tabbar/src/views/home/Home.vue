@@ -3,15 +3,27 @@
         <nav-bar class="home-nav">
             <div slot="center">购物街</div>
         </nav-bar>
+        <tab-control class=" tabControl"
+                     :titles="['流行','新款','精选']"
+                     @tabClick="tabClick"
+                     ref="tabControl1"
+                      v-show="isTabFixed">
+        </tab-control>
         <scroll class="content" ref="scroll"
                 :probe-type="3"
                 @scroll="contentScroll"
                 :pull-up-load="true"
-        @pullingUp="loadMore">
-            <home-swiper :banners="banners"></home-swiper>
+                @pullingUp="loadMore">
+            <home-swiper :banners="banners"
+                         @swiperImageLoad="swiperImageLoad">
+            </home-swiper>
             <recommend-view :recommends="recommends"></recommend-view>
             <feature-view></feature-view>
-            <tab-control class="home-tab" :titles="['流行','新款','精选']" @tabClick="tabClick"></tab-control>
+            <tab-control class="home-tab"
+                         :titles="['流行','新款','精选']"
+                         @tabClick="tabClick"
+                         ref="tabControl2">
+            </tab-control>
             <goods-list :goodsList="goods[currentType].list"></goods-list>
         </scroll>
         <back-top @click.native="backClick" v-show="isShowBackTop"></back-top>
@@ -44,7 +56,9 @@
                     sell: {page: 0, list: []}
                 },
                 currentType: 'pop',
-                isShowBackTop: false
+                isShowBackTop: false,
+                tabOffsetTop: 0,
+                isTabFixed:true
             }
         },
         methods: {
@@ -65,21 +79,26 @@
                         this.currentType = 'sell'
                         break
                 }
+                this.$refs.tabControl1.currentIndex=index
+                this.$refs.tabControl2.currentIndex=index
             },
             /**
              * 返回顶部 scroll是获取的组件元素
              **/
-            backClick(x, y, time) {
+            backClick() {
                 this.$refs.scroll.scrollTo(0, 0, 600)
             },
 
             contentScroll(position) {
                 this.isShowBackTop = (-position.y) > 1000
+                this.isTabFixed=(-position.y)>this.tabOffsetTop
             },
-            loadMore(){
+            loadMore() {
                 this.getHomeGoods(this.currentType)
             },
-
+            swiperImageLoad() {
+                this.tabOffsetTop = this.$refs.tabControl2.$el.offsetTop;
+            },
             /**
              * 网络请求相关方法
              * @returns {Q.Promise<any> | * | Q.Promise<T | never> | PromiseLike<T | never> | Promise<T | never>}
@@ -115,11 +134,12 @@
         }
         ,
         mounted() {
-            const refresh=debounce(this.$refs.scroll.refresh,200)
+            const refresh = debounce(this.$refs.scroll.refresh, 200)
             //图片加载事件
-            this.$bus.$on('itemImageLoad',()=>{
-               refresh()
+            this.$bus.$on('itemImageLoad', () => {
+                refresh()
             })
+
         }
         ,
         components: {
@@ -152,13 +172,17 @@
         top: 44px;
         background: white;
     }
-
+    .tabControl{
+     position: relative;
+        z-index: 99;
+        background: #ffffff;
+    }
     .content {
         position: absolute;
         top: 44px;
         right: 0;
         bottom: 49px;
         left: 0;
-        background-color: white;
+
     }
 </style>

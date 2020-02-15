@@ -7,7 +7,7 @@
                 @mouseleave.native="onLeave">
             <swiper-slide v-for="item in banners" :key="item.title">
                 <a :href="item.link">
-                    <img :src="item.image" class="swiper-img" >
+                    <img :src="item.image" class="swiper-img" @load="imageLoad" >
                 </a>
             </swiper-slide>
             <div class="swiper-pagination" slot="pagination"></div>
@@ -46,7 +46,8 @@
                     autoplay: {
                         disableOnInteraction: false,
                     },
-                }
+                },
+                isLoad:false
             }
         },
         methods: {
@@ -56,6 +57,13 @@
             },
             onLeave() {
                 this.mySwiper.autoplay.start()
+            },
+            imageLoad(){
+                if(!this.isLoad){
+                    this.$emit('swiperImageLoad')
+                    this.isLoad=true
+                }
+
             }
         },
         computed: {
