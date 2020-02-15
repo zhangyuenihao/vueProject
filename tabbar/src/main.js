@@ -8,6 +8,7 @@ import 'swiper/dist/css/swiper.css'
 
 Vue.use(VueAwesomeSwiper)
 Vue.config.productionTip = false
+Vue.prototype.$bus=new Vue()
 /*axios.defaults.baseURL='http://123.207.32.32:8000/api/v1/'*/
 new Vue({
   router,
