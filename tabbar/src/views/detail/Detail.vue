@@ -1,8 +1,12 @@
 <template>
-    <div>详情页{{iid}}</div>
+    <div id="detail">
+        <detail-nav-bar></detail-nav-bar>
+        详情页 {{iid}}
+    </div>
 </template>
 
 <script>
+    import detailNavBar from "./childComps/detailNavBar";
     export default {
         name: "Detail",
         data(){
@@ -13,6 +17,9 @@
         created() {
             console.log(this.$route.params.iid);
             this.iid=this.$route.params.iid
+        },
+        components:{
+            detailNavBar
         }
     }
 </script>
