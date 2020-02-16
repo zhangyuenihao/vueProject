@@ -8,7 +8,7 @@ const Category=()=>import ("./views/category/Category");
 const Cart=()=>import ("./views/cart/Cart");
 const Profile=()=>import ("./views/profile/Profile");
 const Vuex=()=>import ("./views/vuex/Vuex");
-
+const Detail=()=>import("./views/detail/Detail")
 
 export default new Router({
   mode: 'history',
@@ -37,6 +37,10 @@ export default new Router({
     {
       path:'/vuex',
       component:Vuex
+    },
+    {
+      path:'/detail/:iid',
+      component:Detail
     }
 
   ]

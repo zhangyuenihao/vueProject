@@ -7,7 +7,7 @@
                      :titles="['流行','新款','精选']"
                      @tabClick="tabClick"
                      ref="tabControl1"
-                      v-show="isTabFixed">
+                     v-show="isTabFixed">
         </tab-control>
         <scroll class="content" ref="scroll"
                 :probe-type="3"
@@ -58,7 +58,8 @@
                 currentType: 'pop',
                 isShowBackTop: false,
                 tabOffsetTop: 0,
-                isTabFixed:true
+                isTabFixed: false,
+                saveY:0
             }
         },
         methods: {
@@ -79,8 +80,8 @@
                         this.currentType = 'sell'
                         break
                 }
-                this.$refs.tabControl1.currentIndex=index
-                this.$refs.tabControl2.currentIndex=index
+                this.$refs.tabControl1.currentIndex = index
+                this.$refs.tabControl2.currentIndex = index
             },
             /**
              * 返回顶部 scroll是获取的组件元素
@@ -91,7 +92,7 @@
 
             contentScroll(position) {
                 this.isShowBackTop = (-position.y) > 1000
-                this.isTabFixed=(-position.y)>this.tabOffsetTop
+                this.isTabFixed = (-position.y) > this.tabOffsetTop
             },
             loadMore() {
                 this.getHomeGoods(this.currentType)
@@ -122,17 +123,22 @@
                 })
             }
 
-        }
-        ,
-        computed: {}
-        ,
+        },
+        computed: {},
+
+        activated() {
+            this.$refs.scroll.refresh()
+            this.$refs.scroll.scrollTo(0,this.saveY,0)
+        },
+        deactivated() {
+        this.saveY=this.$refs.scroll.getScrollY()
+        },
         created() {
             this.getHomeMultidata()
             this.getHomeGoods('pop')
             this.getHomeGoods('new')
             this.getHomeGoods('sell')
-        }
-        ,
+        },
         mounted() {
             const refresh = debounce(this.$refs.scroll.refresh, 200)
             //图片加载事件
@@ -140,14 +146,12 @@
                 refresh()
             })
 
-        }
-        ,
+        },
         components: {
             NavBar, HomeSwiper, Scroll, RecommendView, FeatureView, TabControl, GoodsList,
             BackTop
         }
-    }
-    ;
+    };
 </script>
 
 <style scoped>
@@ -172,17 +176,19 @@
         top: 44px;
         background: white;
     }
-    .tabControl{
-     position: relative;
+
+    .tabControl {
+        position: relative;
         z-index: 99;
         background: #ffffff;
     }
+
     .content {
         position: absolute;
         top: 44px;
         right: 0;
         bottom: 49px;
         left: 0;
-
+        overflow: hidden;
     }
 </style>
