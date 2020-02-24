@@ -1,29 +1,12 @@
 <template>
-    <div>
-        <swiper :options="swiperOption"
-                v-if="banners.length>0"
-                ref="mySwiper"
-                @mouseenter.native="onEnter"
-                @mouseleave.native="onLeave">
-            <swiper-slide v-for="item in banners" :key="item.title">
-                <a :href="item.link">
-                    <img :src="item.image" class="swiper-img" @load="imageLoad" >
-                </a>
-            </swiper-slide>
-            <div class="swiper-pagination" slot="pagination"></div>
-        </swiper>
-    </div>
-
+   <swiper :banners="banners"></swiper>
 </template>
 
 <script>
-    import {swiper, swiperSlide} from 'vue-awesome-swiper'
+    import Swiper from 'components/common/swiper/Swiper'
 
     export default {
         name: "HomeSwiper",
-        components: {
-            swiper, swiperSlide
-        },
         props: {
             banners: {
                 type: Array,
@@ -32,51 +15,12 @@
                 }
             }
         },
-        data() {
-            return {
-                swiperOption: {
-                    notNextTick: true,
-                    observer: true,
-                    observeParents: true,
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true
-                    },
-                    loop: true,
-                    autoplay: {
-                        disableOnInteraction: false,
-                    },
-                },
-                isLoad:false
-            }
-        },
-        methods: {
-            onEnter() {
-                this.mySwiper.autoplay.stop()
-
-            },
-            onLeave() {
-                this.mySwiper.autoplay.start()
-            },
-            imageLoad(){
-                if(!this.isLoad){
-                    this.$emit('swiperImageLoad')
-                    this.isLoad=true
-                }
-
-            }
-        },
-        computed: {
-            //获取可以操作的swiper
-            mySwiper() {
-                return this.$refs.mySwiper.swiper
-            }
+        components: {
+            Swiper
         }
     }
 </script>
 
 <style>
- .swiper-slide img{
-     width: 100%;
- }
+
 </style>

@@ -108,8 +108,9 @@
                 return getHomeMultidata().then(res => {
                     console.log(res)
                     this.banners = res.data.banner.list;
+                    this.banners=this.banners.map(obj=>obj.image)
                     this.recommends = res.data.recommend.list;
-                    console.log(res.data)
+                    console.log(this.banners)
                 })
             },
             getHomeGoods(type) {
