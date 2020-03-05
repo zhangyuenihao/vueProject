@@ -98,7 +98,9 @@
                 this.getHomeGoods(this.currentType)
             },
             swiperImageLoad() {
+                console.log(2);
                 this.tabOffsetTop = this.$refs.tabControl2.$el.offsetTop;
+                console.log(this.tabOffsetTop);
             },
             /**
              * 网络请求相关方法
@@ -108,9 +110,11 @@
                 return getHomeMultidata().then(res => {
                     console.log(res)
                     this.banners = res.data.banner.list;
-                    this.banners=this.banners.map(obj=>obj.image)
+                    this.banners=this.banners.map(obj=>obj.image);
                     this.recommends = res.data.recommend.list;
                     console.log(this.banners)
+                }).catch(err=>{
+                    console.log(JSON.stringify(err))
                 })
             },
             getHomeGoods(type) {
@@ -120,7 +124,9 @@
                     console.log(res)
                     this.goods[type].list.push(...res.data.list)
                     this.goods[type].page += 1
-                    this.$refs.scroll.finishPullUp();
+                    this.$refs.scroll.finishPullUp()
+                }).catch(err=>{
+                    console.log(JSON.stringify(err))
                 })
             }
 

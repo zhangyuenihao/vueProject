@@ -2,6 +2,8 @@
     <div id="detail">
         <detail-nav-bar></detail-nav-bar>
         <detail-swiper :banners="topImages"></detail-swiper>
+        <detail-base-info :goods="goods"></detail-base-info>
+        <detail-shop-info :shop="shop"></detail-shop-info>
         详情页 {{iid}}
     </div>
 </template>
@@ -9,8 +11,9 @@
 <script>
     import detailNavBar from "./childComps/detailNavBar";
     import detailSwiper from "./childComps/detailSwiper";
-
-    import {getDetailData} from "network/detail";
+    import detailBaseInfo from "./childComps/detailBaseInfo";
+    import detailShopInfo from "./childComps/detailShopInfo";
+    import {getDetailData,Goods,Shop} from "network/detail";
 
     export default {
         name: "Detail",
@@ -18,7 +21,9 @@
             return{
                 iid:null,
                 detailData:null,
-                topImages:[]
+                topImages:[],
+                goods:{},
+                shop:{}
             }
         },
         created() {
@@ -28,13 +33,23 @@
         methods:{
           getDetailData(iid){
                 return getDetailData(iid).then(res=>{
-                    console.log(res.result.itemInfo.topImages);
-                    this.topImages=res.result.itemInfo.topImages
+
+                    let data=res.result
+                    //根据id获取轮播图信息
+                    this.topImages=data.itemInfo.topImages
+                    //获取商品信息
+                    this.goods=new Goods(data.itemInfo,data.columns,data.shopInfo.services)
+                    //获取商家信息
+                    this.shop=new Shop(data.shopInfo)
+                    console.log(data)
+                    console.log(this.shop);
+                }).catch(err=>{
+                    console.log(JSON.stringify(err))
                 })
             }
         },
         components:{
-            detailNavBar,detailSwiper
+            detailNavBar,detailSwiper,detailBaseInfo,detailShopInfo
         }
     }
 </script>

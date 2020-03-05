@@ -62,6 +62,7 @@
                 if(!this.isLoad){
                     this.$emit('swiperImageLoad')
                     this.isLoad=true
+                    console.log(this.isLoad);
                 }
 
             }
@@ -83,5 +84,8 @@
     .swiper-slide img{
         width: 100%;
 
+    }
+    .swiper-pagination-bullet-active{
+        background: var(--color-high-text) !important;
     }
 </style>

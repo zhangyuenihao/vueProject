@@ -30,7 +30,8 @@
             this.scroll=new BScroll(this.$refs.wrapper,{
                 click:true,
                 probeType:this.probeType,
-                pullUpLoad:this.pullUpLoad
+                pullUpLoad:this.pullUpLoad,
+                mouseWheel: true
             })
             //监听滚动的位置
             if(this.probeType==2||this.probeType==3){
@@ -55,7 +56,6 @@
             },
             refresh(){
                this.scroll&&this.scroll.refresh()
-                console.log('----');
             },
             getScrollY(){
                 return this.scroll?this.scroll.y:0
