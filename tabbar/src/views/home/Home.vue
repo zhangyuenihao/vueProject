@@ -13,9 +13,10 @@
                 :probe-type="3"
                 @scroll="contentScroll"
                 :pull-up-load="true"
-                @pullingUp="loadMore">
-            <home-swiper :banners="banners"
-                         @swiperImageLoad="swiperImageLoad">
+                @pullingUp="loadMore"
+                @mouseenter.native="onEnter1">
+
+            <home-swiper :banners="banners">
             </home-swiper>
             <recommend-view :recommends="recommends"></recommend-view>
             <feature-view></feature-view>
@@ -97,11 +98,6 @@
             loadMore() {
                 this.getHomeGoods(this.currentType)
             },
-            swiperImageLoad() {
-                console.log(2);
-                this.tabOffsetTop = this.$refs.tabControl2.$el.offsetTop;
-                console.log(this.tabOffsetTop);
-            },
             /**
              * 网络请求相关方法
              * @returns {Q.Promise<any> | * | Q.Promise<T | never> | PromiseLike<T | never> | Promise<T | never>}
@@ -152,6 +148,10 @@
             this.$bus.$on('itemImageLoad', () => {
                 refresh()
             })
+            this.$bus.$on('swiperImageLoad',()=>{
+                this.tabOffsetTop = this.$refs.tabControl2.$el.offsetTop;
+            })
+
 
         },
         components: {

@@ -53,16 +53,14 @@
         methods: {
             onEnter() {
                 this.mySwiper.autoplay.stop()
-
             },
             onLeave() {
                 this.mySwiper.autoplay.start()
             },
             imageLoad(){
                 if(!this.isLoad){
-                    this.$emit('swiperImageLoad')
+                    this.$bus.$emit('swiperImageLoad')
                     this.isLoad=true
-                    console.log(this.isLoad);
                 }
 
             }

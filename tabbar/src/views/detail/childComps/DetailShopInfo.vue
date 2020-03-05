@@ -141,7 +141,7 @@
     }
     .bottom{
         text-align: center;
-        margin-top: 10px;
+        margin: 10px 0 20px 0;
     }
     .enter-shop{
         display: inline-block;
