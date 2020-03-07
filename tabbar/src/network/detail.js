@@ -14,6 +14,7 @@ export class Goods {
         this.newPrice=itemInfo.price
         this.oldPrice=itemInfo.oldPrice
         this.discount=itemInfo.discountDesc
+        this.discountBgColor=itemInfo.discountBgColor
         this.columns=columns
         this.services=services
         this.realPrice=itemInfo.lowNowPrice
@@ -27,6 +28,13 @@ export class Shop {
         this.sells=shopInfo.cSells;
         this.score=shopInfo.score;
         this.goodsCount=shopInfo.cGoods
+    }
+}
+export class Params{
+    constructor(itemParams){
+        this.set=itemParams.info.set
+        this.images=itemParams.info.images?itemParams.info.images:''
+        this.tables=itemParams.rule.tables
     }
 }
 

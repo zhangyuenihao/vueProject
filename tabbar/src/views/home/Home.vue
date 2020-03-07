@@ -13,8 +13,7 @@
                 :probe-type="3"
                 @scroll="contentScroll"
                 :pull-up-load="true"
-                @pullingUp="loadMore"
-                @mouseenter.native="onEnter1">
+                @pullingUp="loadMore">
 
             <home-swiper :banners="banners">
             </home-swiper>
@@ -104,11 +103,9 @@
              **/
             getHomeMultidata() {
                 return getHomeMultidata().then(res => {
-                    console.log(res)
                     this.banners = res.data.banner.list;
                     this.banners=this.banners.map(obj=>obj.image);
                     this.recommends = res.data.recommend.list;
-                    console.log(this.banners)
                 }).catch(err=>{
                     console.log(JSON.stringify(err))
                 })
@@ -117,7 +114,6 @@
 
                 const page = this.goods[type].page + 1
                 return getHomeGoods(type, page).then(res => {
-                    console.log(res)
                     this.goods[type].list.push(...res.data.list)
                     this.goods[type].page += 1
                     this.$refs.scroll.finishPullUp()

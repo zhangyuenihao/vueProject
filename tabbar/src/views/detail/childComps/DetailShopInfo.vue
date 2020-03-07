@@ -1,5 +1,5 @@
 <template>
-    <div class="shop-info">
+    <div class="shop-info" v-if="Object.keys(shop).length!==0">
         <div class="top">
             <span class="logo"><img :src="shop.logo" alt=""></span>
             <span class="name">{{shop.name}}</span>
@@ -54,10 +54,8 @@
 
 <style scoped>
     .shop-info {
-        border-top: 3px solid #ddd;
-        border-bottom: 3px solid #ddd;
+        border-top: 3px solid #cccccc;
         overflow: hidden;
-        margin-bottom: 40px;
         font-size: 14px;
     }
 
