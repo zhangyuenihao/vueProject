@@ -20,13 +20,18 @@
               }
           }
         },
+        data(){
+            return{
+                iid:''
+            }
+        },
         methods:{
             itemImageLoad(){
                 this.$bus.$emit('itemImageLoad')
             },
             itemClick(){
-                console.log('111');
-                this.$router.push('/detail/'+this.goodsListItem.iid)
+                this.iid=this.goodsListItem.iid?this.goodsListItem.iid:this.goodsListItem.item_id
+                this.$router.push('/detail/'+this.iid)
             }
 
         },

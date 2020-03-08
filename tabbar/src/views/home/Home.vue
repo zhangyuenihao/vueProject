@@ -42,7 +42,7 @@
     import BackTop from "components/content/backTop/BackTop"
 
     import {getHomeMultidata, getHomeGoods} from "network/home"
-    import {debounce} from "common/utils";
+    import {itemListenerMixin} from "common/mixin";
 
     export default {
         name: "Home",
@@ -59,7 +59,8 @@
                 isShowBackTop: false,
                 tabOffsetTop: 0,
                 isTabFixed: false,
-                saveY:0
+                saveY:0,
+                itemImgListener:null
             }
         },
         methods: {
@@ -131,7 +132,9 @@
         },
         deactivated() {
         this.saveY=this.$refs.scroll.getScrollY()
+            this.$bus.$off('itemImageLoad',this.itemImgListener)
         },
+        mixins:[itemListenerMixin],
         created() {
             this.getHomeMultidata()
             this.getHomeGoods('pop')
@@ -139,16 +142,9 @@
             this.getHomeGoods('sell')
         },
         mounted() {
-            const refresh = debounce(this.$refs.scroll.refresh, 200)
-            //图片加载事件
-            this.$bus.$on('itemImageLoad', () => {
-                refresh()
-            })
             this.$bus.$on('swiperImageLoad',()=>{
                 this.tabOffsetTop = this.$refs.tabControl2.$el.offsetTop;
             })
-
-
         },
         components: {
             NavBar, HomeSwiper, Scroll, RecommendView, FeatureView, TabControl, GoodsList,

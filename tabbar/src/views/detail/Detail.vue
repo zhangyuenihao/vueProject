@@ -25,6 +25,7 @@
     import DetailParamsInfo from "./childComps/DetailParamsInfo";
     import DetailCommentInfo from "./childComps/DetailCommentInfo";
     import {getDetailData,getRecommend, Goods, Shop,Params} from "network/detail";
+    import {itemListenerMixin} from "common/mixin";
 
     export default {
         name: "Detail",
@@ -41,6 +42,7 @@
                 recommend:[]
             }
         },
+        mixins:[itemListenerMixin],
         created() {
             this.iid = this.$route.params.iid
             this.getDetailData(this.iid)
@@ -80,6 +82,9 @@
             imageLoad() {
                 this.$refs.scroll.refresh()
             }
+        },
+        destroyed(){
+            this.$bus.$off('itemImageLoad',this.itemImgListener)
         },
         components: {
             DetailNavBar, DetailSwiper, DetailBaseInfo, DetailShopInfo, Scroll, DetailGoodsInfo,
