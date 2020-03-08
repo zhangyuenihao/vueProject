@@ -1,5 +1,5 @@
 <template>
-    <div class="recommend">
+    <div class="recommend" v-if="Object.keys(recommends).length!==0">
         <div v-for="(item,index) in recommends" :key="index" class="recommend-item">
             <a :href="item.link">
                 <img :src="item.image" alt="">

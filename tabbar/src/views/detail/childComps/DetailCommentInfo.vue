@@ -50,7 +50,7 @@
 
 <style scoped>
     .detail-comment-info {
-        border-top: 3px solid #cccccc;
+        border-top: 3px solid #eeeeee;
         padding: 0 20px;
     }
     .info-header {
@@ -84,6 +84,9 @@
     }
     .comment-date{
         margin-right: 10px;
+    }
+    .comment-image{
+        margin-bottom: 10px;
     }
     .comment-image img{
         width: 70px;

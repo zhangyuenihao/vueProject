@@ -1,4 +1,5 @@
 import {request} from './request'
+//根据id获取详情页基本信息
 export function getDetailData(iid) {
     return request({
         url:'/detail',
@@ -7,6 +8,15 @@ export function getDetailData(iid) {
         }
     })
 }
+//推荐信息
+export function getRecommend() {
+    return request({
+        url:'/recommend'
+    })
+}
+
+
+
 export class Goods {
     constructor(itemInfo,columns,services){
         this.title=itemInfo.title

@@ -1,5 +1,5 @@
 <template>
-    <swiper :banners="banners" class="detail-swiper"></swiper>
+    <swiper v-if="Object.keys(banners).length!==0" :banners="banners" class="detail-swiper"></swiper>
 </template>
 
 <script>

@@ -30,7 +30,7 @@
 
 <style scoped>
     .detail-params-info {
-        border-top: 3px solid #cccccc;
+        border-top: 3px solid #eeeeee;
         padding: 20px;
     }
 
@@ -48,7 +48,7 @@
     }
 
     .set {
-        border-top: 2px solid rgba(204, 204, 204, .8);
+        border-top: 2px solid rgba(204, 204, 204, .5);
     }
 
     .info-img img {

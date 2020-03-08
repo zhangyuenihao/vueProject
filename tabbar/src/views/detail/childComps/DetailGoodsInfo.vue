@@ -56,7 +56,7 @@
 
 <style scoped>
     .detail-goods-info{
-        border-top: 3px solid #cccccc;
+        border-top: 3px solid #eeeeee;
     }
 .info-list img{
     width: 100%;

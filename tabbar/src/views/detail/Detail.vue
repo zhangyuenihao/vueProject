@@ -8,6 +8,7 @@
             <detail-goods-info :detail-info="detailInfo" @imageLoad="imageLoad"></detail-goods-info>
             <detail-params-info :params-info="paramsInfo"></detail-params-info>
             <detail-comment-info :comment-info="commentInfo"></detail-comment-info>
+            <goods-list class="detail-recommend" :goods-list="recommend"></goods-list>
         </scroll>
 
     </div>
@@ -15,6 +16,7 @@
 
 <script>
     import Scroll from "components/common/scroll/Scroll";
+    import GoodsList from "components/content/goods/GoodsList";
     import DetailNavBar from "./childComps/DetailNavBar";
     import DetailSwiper from "./childComps/DetailSwiper";
     import DetailBaseInfo from "./childComps/DetailBaseInfo";
@@ -22,7 +24,7 @@
     import DetailGoodsInfo from "./childComps/DetailGoodsInfo";
     import DetailParamsInfo from "./childComps/DetailParamsInfo";
     import DetailCommentInfo from "./childComps/DetailCommentInfo";
-    import {getDetailData, Goods, Shop,Params} from "network/detail";
+    import {getDetailData,getRecommend, Goods, Shop,Params} from "network/detail";
 
     export default {
         name: "Detail",
@@ -35,14 +37,17 @@
                 shop: {},
                 detailInfo: {},
                 paramsInfo: {},
-                commentInfo:{}
+                commentInfo:{},
+                recommend:[]
             }
         },
         created() {
             this.iid = this.$route.params.iid
             this.getDetailData(this.iid)
+            this.getRecommend()
         },
         methods: {
+            //获取详情页信息
             getDetailData(iid) {
                 return getDetailData(iid).then(res => {
 
@@ -61,10 +66,15 @@
                     if(data.rate.cRate!==0){
                         this.commentInfo=data.rate.list[0]
                     }
-                    console.log(data)
-                    console.log(this.commentInfo);
                 }).catch(err => {
                     console.log(JSON.stringify(err))
+                })
+            },
+            //获取推荐信息
+            getRecommend(){
+                return getRecommend().then(res=>{
+                    console.log(res);
+                    this.recommend=res.data.list
                 })
             },
             imageLoad() {
@@ -73,7 +83,7 @@
         },
         components: {
             DetailNavBar, DetailSwiper, DetailBaseInfo, DetailShopInfo, Scroll, DetailGoodsInfo,
-            DetailParamsInfo,DetailCommentInfo
+            DetailParamsInfo,DetailCommentInfo,GoodsList
         }
     }
 </script>
@@ -98,5 +108,8 @@
         left: 0;
         right: 0;
         bottom: 0;
+    }
+    .detail-recommend{
+        border-top: 3px solid #eeeeee;
     }
 </style>

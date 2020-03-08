@@ -54,7 +54,7 @@
 
 <style scoped>
     .shop-info {
-        border-top: 3px solid #cccccc;
+        border-top: 3px solid #eeeeee;
         overflow: hidden;
         font-size: 14px;
     }
