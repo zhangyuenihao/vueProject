@@ -1,14 +1,18 @@
 <template>
     <div id="detail">
-        <detail-nav-bar class="detail-nav"></detail-nav-bar>
-        <scroll class="content" ref="scroll">
-            <detail-swiper :banners="topImages"></detail-swiper>
+        <detail-nav-bar class="detail-nav"
+                        @titleClick="titleClick"
+                        ref="detaiNav"></detail-nav-bar>
+        <scroll class="content" ref="scroll"
+         :probe-type="3"
+        @scroll="contentScroll">
+            <detail-swiper ref="detailSwiper" :banners="topImages"></detail-swiper>
             <detail-base-info :goods="goods"></detail-base-info>
             <detail-shop-info :shop="shop"></detail-shop-info>
             <detail-goods-info :detail-info="detailInfo" @imageLoad="imageLoad"></detail-goods-info>
-            <detail-params-info :params-info="paramsInfo"></detail-params-info>
-            <detail-comment-info :comment-info="commentInfo"></detail-comment-info>
-            <goods-list class="detail-recommend" :goods-list="recommend"></goods-list>
+            <detail-params-info ref="params" :params-info="paramsInfo"></detail-params-info>
+            <detail-comment-info ref="comment" :comment-info="commentInfo"></detail-comment-info>
+            <goods-list ref="recommend" class="detail-recommend" :goods-list="recommend"></goods-list>
         </scroll>
 
     </div>
@@ -24,7 +28,8 @@
     import DetailGoodsInfo from "./childComps/DetailGoodsInfo";
     import DetailParamsInfo from "./childComps/DetailParamsInfo";
     import DetailCommentInfo from "./childComps/DetailCommentInfo";
-    import {getDetailData,getRecommend, Goods, Shop,Params} from "network/detail";
+    import {getDetailData, getRecommend, Goods, Shop, Params} from "network/detail";
+    import {debounce} from "common/utils";
     import {itemListenerMixin} from "common/mixin";
 
     export default {
@@ -38,15 +43,29 @@
                 shop: {},
                 detailInfo: {},
                 paramsInfo: {},
-                commentInfo:{},
-                recommend:[]
+                commentInfo: {},
+                recommend: [],
+                themeTopYs: [],
+                getThemeTopY: null,
+                currentIndex:0
             }
         },
-        mixins:[itemListenerMixin],
+        mixins: [itemListenerMixin],
         created() {
             this.iid = this.$route.params.iid
             this.getDetailData(this.iid)
             this.getRecommend()
+
+            this.getThemeTopY = debounce(() => {
+                //每次获取先清空
+                this.themeTopYs = []
+                this.themeTopYs.push(this.$refs.detailSwiper.$el.offsetTop)
+                this.themeTopYs.push(this.$refs.params.$el.offsetTop)
+                this.themeTopYs.push(this.$refs.comment.$el.offsetTop)
+                this.themeTopYs.push(this.$refs.recommend.$el.offsetTop)
+                this.themeTopYs.push(Number.MAX_VALUE)
+                console.log(this.themeTopYs);
+            },200)
         },
         methods: {
             //获取详情页信息
@@ -63,32 +82,50 @@
                     //获取商品详细信息
                     this.detailInfo = data.detailInfo
                     //获取商品参数信息
-                    this.paramsInfo=new Params(data.itemParams)
+                    this.paramsInfo = new Params(data.itemParams)
                     //获取商品评论信息,如果评论信息不为零才展示
-                    if(data.rate.cRate!==0){
-                        this.commentInfo=data.rate.list[0]
+                    if (data.rate.cRate !== 0) {
+                        this.commentInfo = data.rate.list[0]
                     }
                 }).catch(err => {
                     console.log(JSON.stringify(err))
                 })
             },
             //获取推荐信息
-            getRecommend(){
-                return getRecommend().then(res=>{
+            getRecommend() {
+                return getRecommend().then(res => {
                     console.log(res);
-                    this.recommend=res.data.list
+                    this.recommend = res.data.list
                 })
             },
             imageLoad() {
-                this.$refs.scroll.refresh()
+                this.newRefresh()
+                this.getThemeTopY()
+            },
+            titleClick(index){
+                this.$refs.scroll.scrollTo(0,-this.themeTopYs[index],200)
+            },
+            contentScroll(position){
+                const positionY=-position.y
+                const length=this.themeTopYs.length
+                for(var i=0;i<length;i++){
+                    if(this.currentIndex!==i){
+                        if(positionY>=this.themeTopYs[i]&&positionY<this.themeTopYs[i+1]){
+                            this.currentIndex=i
+                        }
+                    }
+                }
+                this.$refs.detaiNav.currentIndex=this.currentIndex
+
             }
+
         },
-        destroyed(){
-            this.$bus.$off('itemImageLoad',this.itemImgListener)
+        destroyed() {
+            this.$bus.$off('itemImageLoad', this.itemImgListener)
         },
         components: {
             DetailNavBar, DetailSwiper, DetailBaseInfo, DetailShopInfo, Scroll, DetailGoodsInfo,
-            DetailParamsInfo,DetailCommentInfo,GoodsList
+            DetailParamsInfo, DetailCommentInfo, GoodsList
         }
     }
 </script>
@@ -114,7 +151,8 @@
         right: 0;
         bottom: 0;
     }
-    .detail-recommend{
+
+    .detail-recommend {
         border-top: 3px solid #eeeeee;
     }
 </style>

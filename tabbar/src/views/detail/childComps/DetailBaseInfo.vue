@@ -37,44 +37,48 @@
 </script>
 
 <style scoped>
-    .itemInfo{
-        padding:0 10px;
+    .itemInfo {
+        padding: 0 10px;
     }
- .info-title{
-     margin:20px 0;
-     font-size: 14px;
-     line-height: 20px;
- }
-    .n-price{
+
+    .info-title {
+        margin: 20px 0;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .n-price {
         color: var(--color-high-text);
         font-size: 20px;
     }
-    .o-price{
+
+    .o-price {
         text-decoration: line-through;
         font-size: 12px;
         color: #ccc;
         margin: 0 10px;
     }
-    .discount{
+
+    .discount {
         background: var(--color-high-text);
         color: #ffffff;
         font-size: 12px;
-        vertical-align: top;
-        border-radius: 5px;
+        border-radius: 10px;
         padding: 2px 5px;
     }
-    .info-others{
+
+    .info-others {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         font-size: 12px;
         color: #cccccc;
         line-height: 40px;
-        border-bottom:1px solid #dddddd ;
+        border-bottom: 1px solid #dddddd;
         margin-top: 10px;
     }
 
-    .info-sevice{
+    .info-sevice {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -82,9 +86,9 @@
         line-height: 60px;
     }
 
-    .info-service-item img{
-       width: 14px;
+    .info-service-item img {
+        width: 14px;
         height: 14px;
-       vertical-align: middle;
+        vertical-align: middle;
     }
 </style>
