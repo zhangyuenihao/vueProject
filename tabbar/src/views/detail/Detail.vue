@@ -4,8 +4,8 @@
                         @titleClick="titleClick"
                         ref="detaiNav"></detail-nav-bar>
         <scroll class="content" ref="scroll"
-         :probe-type="3"
-        @scroll="contentScroll">
+                :probe-type="3"
+                @scroll="contentScroll">
             <detail-swiper ref="detailSwiper" :banners="topImages"></detail-swiper>
             <detail-base-info :goods="goods"></detail-base-info>
             <detail-shop-info :shop="shop"></detail-shop-info>
@@ -14,7 +14,7 @@
             <detail-comment-info ref="comment" :comment-info="commentInfo"></detail-comment-info>
             <goods-list ref="recommend" class="detail-recommend" :goods-list="recommend"></goods-list>
         </scroll>
-
+        <detail-bottom-bar></detail-bottom-bar>
     </div>
 </template>
 
@@ -28,6 +28,7 @@
     import DetailGoodsInfo from "./childComps/DetailGoodsInfo";
     import DetailParamsInfo from "./childComps/DetailParamsInfo";
     import DetailCommentInfo from "./childComps/DetailCommentInfo";
+    import DetailBottomBar from "./childComps/DetailBottomBar";
     import {getDetailData, getRecommend, Goods, Shop, Params} from "network/detail";
     import {debounce} from "common/utils";
     import {itemListenerMixin} from "common/mixin";
@@ -47,7 +48,7 @@
                 recommend: [],
                 themeTopYs: [],
                 getThemeTopY: null,
-                currentIndex:0
+                currentIndex: 0
             }
         },
         mixins: [itemListenerMixin],
@@ -64,8 +65,7 @@
                 this.themeTopYs.push(this.$refs.comment.$el.offsetTop)
                 this.themeTopYs.push(this.$refs.recommend.$el.offsetTop)
                 this.themeTopYs.push(Number.MAX_VALUE)
-                console.log(this.themeTopYs);
-            },200)
+            }, 200)
         },
         methods: {
             //获取详情页信息
@@ -94,7 +94,6 @@
             //获取推荐信息
             getRecommend() {
                 return getRecommend().then(res => {
-                    console.log(res);
                     this.recommend = res.data.list
                 })
             },
@@ -102,20 +101,20 @@
                 this.newRefresh()
                 this.getThemeTopY()
             },
-            titleClick(index){
-                this.$refs.scroll.scrollTo(0,-this.themeTopYs[index],200)
+            titleClick(index) {
+                this.$refs.scroll.scrollTo(0, -this.themeTopYs[index], 200)
             },
-            contentScroll(position){
-                const positionY=-position.y
-                const length=this.themeTopYs.length
-                for(var i=0;i<length;i++){
-                    if(this.currentIndex!==i){
-                        if(positionY>=this.themeTopYs[i]&&positionY<this.themeTopYs[i+1]){
-                            this.currentIndex=i
+            contentScroll(position) {
+                const positionY = -position.y
+                const length = this.themeTopYs.length
+                for (var i = 0; i < length; i++) {
+                    if (this.currentIndex !== i) {
+                        if (positionY >= this.themeTopYs[i] && positionY < this.themeTopYs[i + 1]) {
+                            this.currentIndex = i
                         }
                     }
                 }
-                this.$refs.detaiNav.currentIndex=this.currentIndex
+                this.$refs.detaiNav.currentIndex = this.currentIndex
 
             }
 
@@ -125,7 +124,7 @@
         },
         components: {
             DetailNavBar, DetailSwiper, DetailBaseInfo, DetailShopInfo, Scroll, DetailGoodsInfo,
-            DetailParamsInfo, DetailCommentInfo, GoodsList
+            DetailParamsInfo, DetailCommentInfo, GoodsList, DetailBottomBar
         }
     }
 </script>
