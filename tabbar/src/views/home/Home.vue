@@ -39,13 +39,14 @@
     import Scroll from 'components/common/scroll/Scroll'
     import TabControl from 'components/content/tabControl/TabControl'
     import GoodsList from 'components/content/goods/GoodsList'
-    import BackTop from "components/content/backTop/BackTop"
+
 
     import {getHomeMultidata, getHomeGoods} from "network/home"
-    import {itemListenerMixin} from "common/mixin";
+    import {itemListenerMixin, backTopMixin} from "common/mixin";
 
     export default {
         name: "Home",
+        mixins: [itemListenerMixin, backTopMixin],
         data() {
             return {
                 banners: [],
@@ -56,11 +57,10 @@
                     sell: {page: 0, list: []}
                 },
                 currentType: 'pop',
-                isShowBackTop: false,
                 tabOffsetTop: 0,
                 isTabFixed: false,
-                saveY:0,
-                itemImgListener:null
+                saveY: 0,
+                itemImgListener: null
             }
         },
         methods: {
@@ -84,15 +84,9 @@
                 this.$refs.tabControl1.currentIndex = index
                 this.$refs.tabControl2.currentIndex = index
             },
-            /**
-             * 返回顶部 scroll是获取的组件元素
-             **/
-            backClick() {
-                this.$refs.scroll.scrollTo(0, 0, 600)
-            },
 
             contentScroll(position) {
-                this.isShowBackTop = (-position.y) > 1000
+                this.listenShowBackTop(position)
                 this.isTabFixed = (-position.y) > this.tabOffsetTop
             },
             loadMore() {
@@ -105,9 +99,9 @@
             getHomeMultidata() {
                 return getHomeMultidata().then(res => {
                     this.banners = res.data.banner.list;
-                    this.banners=this.banners.map(obj=>obj.image);
+                    this.banners = this.banners.map(obj => obj.image);
                     this.recommends = res.data.recommend.list;
-                }).catch(err=>{
+                }).catch(err => {
                     console.log(JSON.stringify(err))
                 })
             },
@@ -118,7 +112,7 @@
                     this.goods[type].list.push(...res.data.list)
                     this.goods[type].page += 1
                     this.$refs.scroll.finishPullUp()
-                }).catch(err=>{
+                }).catch(err => {
                     console.log(JSON.stringify(err))
                 })
             }
@@ -128,13 +122,12 @@
 
         activated() {
             this.$refs.scroll.refresh()
-            this.$refs.scroll.scrollTo(0,this.saveY,0)
+            this.$refs.scroll.scrollTo(0, this.saveY, 0)
         },
         deactivated() {
-        this.saveY=this.$refs.scroll.getScrollY()
-            this.$bus.$off('itemImageLoad',this.itemImgListener)
+            this.saveY = this.$refs.scroll.getScrollY()
+            this.$bus.$off('itemImageLoad', this.itemImgListener)
         },
-        mixins:[itemListenerMixin],
         created() {
             this.getHomeMultidata()
             this.getHomeGoods('pop')
@@ -142,13 +135,13 @@
             this.getHomeGoods('sell')
         },
         mounted() {
-            this.$bus.$on('swiperImageLoad',()=>{
+            this.$bus.$on('swiperImageLoad', () => {
                 this.tabOffsetTop = this.$refs.tabControl2.$el.offsetTop;
             })
+
         },
         components: {
-            NavBar, HomeSwiper, Scroll, RecommendView, FeatureView, TabControl, GoodsList,
-            BackTop
+            NavBar, HomeSwiper, Scroll, RecommendView, FeatureView, TabControl, GoodsList
         }
     };
 </script>

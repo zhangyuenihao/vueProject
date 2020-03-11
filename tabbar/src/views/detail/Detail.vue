@@ -14,6 +14,7 @@
             <detail-comment-info ref="comment" :comment-info="commentInfo"></detail-comment-info>
             <goods-list ref="recommend" class="detail-recommend" :goods-list="recommend"></goods-list>
         </scroll>
+        <back-top @click.native="backClick" v-show="isShowBackTop"></back-top>
         <detail-bottom-bar></detail-bottom-bar>
     </div>
 </template>
@@ -31,7 +32,7 @@
     import DetailBottomBar from "./childComps/DetailBottomBar";
     import {getDetailData, getRecommend, Goods, Shop, Params} from "network/detail";
     import {debounce} from "common/utils";
-    import {itemListenerMixin} from "common/mixin";
+    import {itemListenerMixin, backTopMixin} from "common/mixin";
 
     export default {
         name: "Detail",
@@ -51,7 +52,7 @@
                 currentIndex: 0
             }
         },
-        mixins: [itemListenerMixin],
+        mixins: [itemListenerMixin, backTopMixin],
         created() {
             this.iid = this.$route.params.iid
             this.getDetailData(this.iid)
@@ -115,7 +116,7 @@
                     }
                 }
                 this.$refs.detaiNav.currentIndex = this.currentIndex
-
+                this.listenShowBackTop(position)
             }
 
         },
@@ -148,7 +149,8 @@
         top: 44px;
         left: 0;
         right: 0;
-        bottom: 0;
+        bottom: 49px;
+        overflow: hidden;
     }
 
     .detail-recommend {
