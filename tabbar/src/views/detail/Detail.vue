@@ -3,9 +3,13 @@
         <detail-nav-bar class="detail-nav"
                         @titleClick="titleClick"
                         ref="detaiNav"></detail-nav-bar>
+        <detail-add-to-cart v-show="isShowSku" :sku-info="skuInfo" :iid="iid" class="addToCart"
+                            @cartClick="cartClick"></detail-add-to-cart>
+
         <scroll class="content" ref="scroll"
                 :probe-type="3"
                 @scroll="contentScroll">
+          
             <detail-swiper ref="detailSwiper" :banners="topImages"></detail-swiper>
             <detail-base-info :goods="goods"></detail-base-info>
             <detail-shop-info :shop="shop"></detail-shop-info>
@@ -15,7 +19,8 @@
             <goods-list ref="recommend" class="detail-recommend" :goods-list="recommend"></goods-list>
         </scroll>
         <back-top @click.native="backClick" v-show="isShowBackTop"></back-top>
-        <detail-bottom-bar></detail-bottom-bar>
+        <detail-bottom-bar @cartClick="cartClick"></detail-bottom-bar>
+
     </div>
 </template>
 
@@ -30,6 +35,7 @@
     import DetailParamsInfo from "./childComps/DetailParamsInfo";
     import DetailCommentInfo from "./childComps/DetailCommentInfo";
     import DetailBottomBar from "./childComps/DetailBottomBar";
+    import DetailAddToCart from "./childComps/DetailAddToCart";
     import {getDetailData, getRecommend, Goods, Shop, Params} from "network/detail";
     import {debounce} from "common/utils";
     import {itemListenerMixin, backTopMixin} from "common/mixin";
@@ -46,10 +52,12 @@
                 detailInfo: {},
                 paramsInfo: {},
                 commentInfo: {},
+                skuInfo: {},
                 recommend: [],
                 themeTopYs: [],
                 getThemeTopY: null,
-                currentIndex: 0
+                currentIndex: 0,
+                isShowSku: false
             }
         },
         mixins: [itemListenerMixin, backTopMixin],
@@ -88,6 +96,10 @@
                     if (data.rate.cRate !== 0) {
                         this.commentInfo = data.rate.list[0]
                     }
+                    //获取商品购物车信息
+                    this.skuInfo = data.skuInfo
+                    console.log(data)
+                    console.log(this.skuInfo);
                 }).catch(err => {
                     console.log(JSON.stringify(err))
                 })
@@ -117,15 +129,18 @@
                 }
                 this.$refs.detaiNav.currentIndex = this.currentIndex
                 this.listenShowBackTop(position)
+            },
+            cartClick() {
+                console.log(1);
+                this.isShowSku = !this.isShowSku
             }
-
         },
         destroyed() {
             this.$bus.$off('itemImageLoad', this.itemImgListener)
         },
         components: {
             DetailNavBar, DetailSwiper, DetailBaseInfo, DetailShopInfo, Scroll, DetailGoodsInfo,
-            DetailParamsInfo, DetailCommentInfo, GoodsList, DetailBottomBar
+            DetailParamsInfo, DetailCommentInfo, GoodsList, DetailBottomBar, DetailAddToCart
         }
     }
 </script>
@@ -144,13 +159,18 @@
         background: #ffffff;
     }
 
-    .content {
+    .content, .addToCart {
         position: absolute;
         top: 44px;
         left: 0;
         right: 0;
         bottom: 49px;
         overflow: hidden;
+    }
+
+    .addToCart {
+        bottom: 0;
+        z-index: 20;
     }
 
     .detail-recommend {

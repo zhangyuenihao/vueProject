@@ -12,7 +12,7 @@
             <span class="icon"></span>
             <p class="item-text">收藏</p>
         </div>
-        <div class="tab-bar-item cart">
+        <div class="tab-bar-item cart" @click="cartClick">
             加入购物车
         </div>
         <div class="tab-bar-item buy">
@@ -38,6 +38,11 @@
         },
         data() {
             return {}
+        },
+        methods:{
+            cartClick(){
+                this.$emit('cartClick')
+            }
         }
     }
 </script>

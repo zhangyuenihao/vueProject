@@ -1,5 +1,6 @@
 import {debounce} from "./utils";
 import BackTop from "components/content/backTop/BackTop"
+import CountBtn from "components/content/countBtn/CountBtn";
 
 export const itemListenerMixin = {
     data() {
@@ -40,6 +41,25 @@ export const backTopMixin = {
         },
         listenShowBackTop(position) {
             this.isShowBackTop = (-position.y) > this.offsetHeight
+        }
+    }
+}
+export const countBtnMixin = {
+    components: {
+        CountBtn
+    },
+    methods: {
+        subClick() {
+
+            if (this.count < 2) {
+                return
+            }
+            this.count--
+            console.log(this.count);
+        },
+        addClick() {
+            this.count++
+            console.log(this.count);
         }
     }
 }

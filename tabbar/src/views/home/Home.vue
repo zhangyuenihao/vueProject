@@ -106,7 +106,6 @@
                 })
             },
             getHomeGoods(type) {
-
                 const page = this.goods[type].page + 1
                 return getHomeGoods(type, page).then(res => {
                     this.goods[type].list.push(...res.data.list)
@@ -121,6 +120,7 @@
         computed: {},
 
         activated() {
+            this.tabOffsetTop = this.$refs.tabControl2.$el.offsetTop;
             this.$refs.scroll.refresh()
             this.$refs.scroll.scrollTo(0, this.saveY, 0)
         },
@@ -139,6 +139,9 @@
                 this.tabOffsetTop = this.$refs.tabControl2.$el.offsetTop;
             })
 
+        },
+        destroyed() {
+            console.log(1);
         },
         components: {
             NavBar, HomeSwiper, Scroll, RecommendView, FeatureView, TabControl, GoodsList
