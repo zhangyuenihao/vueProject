@@ -23,7 +23,10 @@
         },
         methods:{
             itemClick(){
-               this.$router.push(this.path)
+                if(!this.isActive){
+                    this.$router.push(this.path)
+                }
+
             }
         },
         computed:{
