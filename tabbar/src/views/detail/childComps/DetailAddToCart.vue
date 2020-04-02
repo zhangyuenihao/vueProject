@@ -39,7 +39,8 @@
                     </div>
                     <div class="count">
                         <span>购买数量</span>
-                        <count-btn class="count-btn" :count="count" @subClick="subClick" @addClick="addClick">
+                        <count-btn class="count-btn" :count="count" @subClick="subClick(count)"
+                                   @addClick="addClick(count)">
                         </count-btn>
                     </div>
                 </div>
@@ -54,12 +55,12 @@
 
 <script>
     import Scroll from "components/common/scroll/Scroll";
-    import {countBtnMixin} from "common/mixin";
+    import CountBtn from "components/content/countBtn/CountBtn";
 
     export default {
         name: "DetailAddToCart",
         components: {
-            Scroll
+            Scroll,CountBtn
         },
         props: {
             skuInfo: {
@@ -75,7 +76,6 @@
                 }
             }
         },
-        mixins: [countBtnMixin],
         data() {
             return {
                 defaultImage: 0,
@@ -135,7 +135,10 @@
                 product.currentPrice = this.nowPrice
                 product.iid = this.iid
                 product.count = this.count
-                this.$store.dispatch('addCart', product)
+                product.isChecked=true
+                this.$store.dispatch('addCart', product).then(res=>{
+                    console.log(res)
+                })
             },
             confirmClick() {
                 this.closeHandler()
@@ -162,11 +165,21 @@
                         return item.styleId == n && item.sizeId == m
                     })
                     this.nowPrice = (priceArr[0].nowprice / 100).toFixed(2)
-                    console.log(priceArr[0]);
                     this.currentStyle = priceArr[0].style
                     this.currentSize = priceArr[0].size
                 }
 
+            },
+            subClick(count) {
+                if (count < 2) {
+                    return
+                }
+                count--
+                this.count = count
+            },
+            addClick(count) {
+                count++
+                this.count = count
             }
         },
         filters: {
@@ -232,7 +245,7 @@
     }
 
     .content {
-        max-height: 280px;
+        max-height: 500px;
         overflow: hidden;
     }
 
@@ -297,8 +310,7 @@
 
     .count {
         border-bottom: 1px solid #eeeeee;
-        margin: 20px 0px;
-        padding: 0 10px;
+        padding: 10px;
     }
 
 

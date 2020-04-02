@@ -3,26 +3,15 @@
         <nav-bar class="navBar">
             <div slot="center">购物车({{cartLength}})</div>
         </nav-bar>
+
         <scroll class="content" ref="scroll">
-            <div>{{$store.state.cartList}}</div>
-            <div class="cartList">
-                <div class="item">
 
-                    <img src="" alt="">
-                    <div class="info">
-                        <p class="title"></p>
-                        <p class="current"></p>
-                        <div class="curretPrice">
-                            <span class="price"></span>
-                            <div class="count"></div>
-                        </div>
-
-                    </div>
-
-
-                </div>
+            <cart-list :cartList="cartList" v-if="Object(cartList).length!==0"></cart-list>
+            <div class="empty-content" v-else>
+                <div>购物车是空的！快来添点东西吧！</div>
             </div>
         </scroll>
+        <cart-bottom-bar></cart-bottom-bar>
 
     </div>
 
@@ -33,22 +22,32 @@
     import Scroll from "components/common/scroll/Scroll";
     import {mapGetters} from 'vuex'
 
+    import CartList from "./childComps/CartList";
+    import CartBottomBar from "./childComps/CartBottomBar";
+
     export default {
         name: "Cart",
         data() {
             return {};
         },
-        methods: {},
+        methods: {
+
+        },
         computed: {
             ...mapGetters(['cartList', 'cartLength'])
         },
         created() {
         },
         mounted() {
-            console.log(this.$store.state.cartList);
+            console.log(22);
+        },
+        activated() {
+            console.log(11);
+            console.log(this.$refs.scroll)
+            this.$refs.scroll.refresh()
         },
         components: {
-            NavBar, Scroll
+            NavBar, Scroll, CartList,CartBottomBar
         }
     };
 </script>
@@ -64,7 +63,7 @@
         color: #ffffff;
     }
 
-    .content {
+    .content, .empty-content {
         position: absolute;
         top: 44px;
         right: 0;
@@ -72,4 +71,13 @@
         left: 0;
         overflow: hidden;
     }
+
+
+    .empty-content div {
+        color: #cccccc;
+        margin: 300px auto;
+        text-align: center;
+    }
+
+
 </style>

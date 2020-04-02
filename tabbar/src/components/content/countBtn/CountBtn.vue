@@ -18,12 +18,17 @@
             }
         },
         methods: {
-            subClick() {
-                this.$emit('subClick')
+            subClick(count) {
+                this.$emit('subClick', count)
             },
-            addClick() {
-                this.$emit('addClick')
+            addClick(count) {
+                this.$emit('addClick', count)
             },
+        },
+        watch: {
+            count(value) {
+                this.count = value
+            }
         }
     }
 </script>
@@ -32,10 +37,11 @@
     .count-btn {
         float: right;
         margin-right: 10px;
+        vertical-align: middle;
     }
 
     .count-btn span {
-        padding: 0 8px;
+        padding: 2px 8px;
         background-color: #eeeeee;
         border: 1px solid #ffffff;
     }

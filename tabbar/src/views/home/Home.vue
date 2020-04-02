@@ -141,7 +141,7 @@
 
         },
         destroyed() {
-            console.log(1);
+
         },
         components: {
             NavBar, HomeSwiper, Scroll, RecommendView, FeatureView, TabControl, GoodsList

@@ -9,7 +9,7 @@
         <scroll class="content" ref="scroll"
                 :probe-type="3"
                 @scroll="contentScroll">
-          
+
             <detail-swiper ref="detailSwiper" :banners="topImages"></detail-swiper>
             <detail-base-info :goods="goods"></detail-base-info>
             <detail-shop-info :shop="shop"></detail-shop-info>
@@ -98,8 +98,6 @@
                     }
                     //获取商品购物车信息
                     this.skuInfo = data.skuInfo
-                    console.log(data)
-                    console.log(this.skuInfo);
                 }).catch(err => {
                     console.log(JSON.stringify(err))
                 })
@@ -131,7 +129,6 @@
                 this.listenShowBackTop(position)
             },
             cartClick() {
-                console.log(1);
                 this.isShowSku = !this.isShowSku
             }
         },
