@@ -16,7 +16,7 @@ export default {
                 oldProduct = context.state.cartList.splice(index, 1)[0]
                 context.commit(ADD_COUNT, {oldProduct, payLoad})
                 context.commit(ADD_PRODUCT, oldProduct)
-                resolve('添加购车车成功,当前商品数量加' + payLoad.count)
+                resolve('添加购车车成功,当前商品数量+' + payLoad.count)
             } else {
                 context.commit(ADD_PRODUCT, payLoad)
                 resolve('添加购车车成功')

@@ -26,6 +26,8 @@
 
 <script>
     import Scroll from "components/common/scroll/Scroll";
+
+
     import GoodsList from "components/content/goods/GoodsList";
     import DetailNavBar from "./childComps/DetailNavBar";
     import DetailSwiper from "./childComps/DetailSwiper";

@@ -60,7 +60,7 @@
     export default {
         name: "DetailAddToCart",
         components: {
-            Scroll,CountBtn
+            Scroll, CountBtn
         },
         props: {
             skuInfo: {
@@ -135,17 +135,15 @@
                 product.currentPrice = this.nowPrice
                 product.iid = this.iid
                 product.count = this.count
-                product.isChecked=true
-                this.$store.dispatch('addCart', product).then(res=>{
-                    console.log(res)
+                product.isChecked = true
+                this.$store.dispatch('addCart', product).then(res => {
+                    this.$toast.show(res,1500,this.closeHandler)
                 })
             },
             confirmClick() {
-                this.closeHandler()
                 if (this.currentStyle && this.currentSize) {
                     this.addToCart()
                 }
-
             },
             getPrice(str, n, m) {
                 if (!n || !m) {
