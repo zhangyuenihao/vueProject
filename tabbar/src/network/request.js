@@ -10,7 +10,6 @@ export function request(config) {
     })
     //请求拦截
     instance.interceptors.request.use(config => {
-        console.log(config)
         return config
     }, err => {
         console.log(err)

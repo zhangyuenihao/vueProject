@@ -39,11 +39,9 @@
         created() {
         },
         mounted() {
-            console.log(22);
+
         },
         activated() {
-            console.log(11);
-            console.log(this.$refs.scroll)
             this.$refs.scroll.refresh()
         },
         components: {

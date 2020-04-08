@@ -11,7 +11,6 @@ const Detail=()=>import("views/detail/Detail")
 
 
 export default new Router({
-  mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {

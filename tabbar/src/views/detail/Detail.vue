@@ -69,6 +69,7 @@
             this.getRecommend()
 
             this.getThemeTopY = debounce(() => {
+                if(!this.$refs.detailSwiper) return
                 //每次获取先清空
                 this.themeTopYs = []
                 this.themeTopYs.push(this.$refs.detailSwiper.$el.offsetTop)
@@ -76,7 +77,7 @@
                 this.themeTopYs.push(this.$refs.comment.$el.offsetTop)
                 this.themeTopYs.push(this.$refs.recommend.$el.offsetTop)
                 this.themeTopYs.push(Number.MAX_VALUE)
-            }, 200)
+            }, 100)
         },
         methods: {
             //获取详情页信息
