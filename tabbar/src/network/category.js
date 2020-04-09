@@ -1,4 +1,4 @@
-import {request} from './network'
+import {request} from './request'
 
 
 export function getCategory() {

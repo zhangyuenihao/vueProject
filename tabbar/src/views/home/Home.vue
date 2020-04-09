@@ -108,7 +108,12 @@
             getHomeGoods(type) {
                 const page = this.goods[type].page + 1
                 return getHomeGoods(type, page).then(res => {
-                    this.goods[type].list.push(...res.data.list)
+                    const data=res.data.list
+                    data.forEach(item=>{
+                        item.img=item.show.img
+                        delete item.show
+                    })
+                    this.goods[type].list.push(...data)
                     this.goods[type].page += 1
                     this.$refs.scroll.finishPullUp()
                 }).catch(err => {

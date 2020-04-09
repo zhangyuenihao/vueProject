@@ -45,7 +45,10 @@ export class Params{
     constructor(itemParams){
         this.set=itemParams.info.set
         this.images=itemParams.info.images?itemParams.info.images:''
-        this.tables=itemParams.rule.tables
+        if(itemParams.rule){
+            this.tables=itemParams.rule.tables?itemParams.rule.tables:''
+        }
+
     }
 }
 

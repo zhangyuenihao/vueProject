@@ -26,8 +26,6 @@
 
 <script>
     import Scroll from "components/common/scroll/Scroll";
-
-
     import GoodsList from "components/content/goods/GoodsList";
     import DetailNavBar from "./childComps/DetailNavBar";
     import DetailSwiper from "./childComps/DetailSwiper";
@@ -85,6 +83,7 @@
                 return getDetailData(iid).then(res => {
 
                     let data = res.result
+                    console.log(data)
                     //根据id获取轮播图信息
                     this.topImages = data.itemInfo.topImages
                     //获取商品信息
@@ -101,13 +100,19 @@
                     }
                     //获取商品购物车信息
                     this.skuInfo = data.skuInfo
+                    console.log(this.skuInfo);
                 }).catch(err => {
-                    console.log(JSON.stringify(err))
+                    console.log(err)
                 })
             },
             //获取推荐信息
             getRecommend() {
                 return getRecommend().then(res => {
+                    const data=res.data.list
+                    data.forEach(item=>{
+                        item.img=item.image
+                        delete item.image
+                    })
                     this.recommend = res.data.list
                 })
             },
@@ -131,8 +136,24 @@
                 this.$refs.detaiNav.currentIndex = this.currentIndex
                 this.listenShowBackTop(position)
             },
+            addToCart() {
+                const product = {}
+                product.image = this.nowImage
+                product.title = this.skuInfo.title
+                product.currentStyle = this.currentStyle
+                product.currentSize = this.currentSize
+                product.currentPrice = this.nowPrice
+                product.iid = this.iid
+                product.count = this.count
+                product.isChecked = true
+                this.$store.dispatch('addCart', product).then(res => {
+                    this.$toast.show(res,1500,this.closeHandler)
+                })
+            },
             cartClick() {
                 this.isShowSku = !this.isShowSku
+                console.log(this.isShowSku)
+
             }
         },
         destroyed() {
@@ -169,6 +190,7 @@
     }
 
     .addToCart {
+        top: 0;
         bottom: 0;
         z-index: 20;
     }

@@ -213,7 +213,7 @@
 <style scoped>
     .addToCart {
         background-color: rgba(0, 0, 0, .5);
-        padding-top: 100px;
+        padding-top: 150px;
         overflow: hidden;
     }
 
@@ -240,12 +240,10 @@
         background: #ffffff;
         position: relative;
         z-index: 2;
+        display: flex;
     }
 
-    .content {
-        max-height: 500px;
-        overflow: hidden;
-    }
+
 
     .product-img {
         width: 100px;
@@ -258,12 +256,18 @@
         display: inline-block;
         margin-left: 20px;
         line-height: 30px;
+        overflow: hidden;
+
     }
 
     .price {
         color: var(--color-high-text);
     }
-
+    .content {
+        min-height: 200px;
+        max-height: 320px;
+        overflow: hidden;
+    }
     .props-label {
         line-height: 24px;
         margin-left: 10px;
@@ -310,7 +314,9 @@
         border-bottom: 1px solid #eeeeee;
         padding: 10px;
     }
-
+.bottom{
+    background-color: white;
+}
 
     .confirm {
         display: inline-block;

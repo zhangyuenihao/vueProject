@@ -3,9 +3,10 @@ import axios from 'axios'
 export function request(config) {
     //创建实例
     const instance = axios.create({
-        baseURL: 'http://123.207.32.32:8000/api/h8',
+       /* baseURL: 'http://123.207.32.32:8000/api/h8',*/
+        /*baseURL: 'http://152.136185.210:8000/api/h8',*/
         /* baseURL:'http://yapi.demo.qunar.com/mock/29662/suppermall',*/
-        /*baseURL:'http://106.54.54.237:8000/api/wh',*/
+        baseURL:'http://106.54.54.237:8000/api/h8',
         timeout: 5000
     })
     //请求拦截
